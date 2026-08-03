@@ -14,6 +14,7 @@ const products = fs.readFileSync(path.join(root, 'lib/products.ts'), 'utf8')
 const productCatalog = fs.readFileSync(path.join(root, 'components/products/product-catalog.tsx'), 'utf8')
 const footer = fs.readFileSync(path.join(root, 'components/layout/site-footer.tsx'), 'utf8')
 const productsDb = fs.readFileSync(path.join(root, 'lib/products-db.ts'), 'utf8')
+const verifiedSpecs = fs.readFileSync(path.join(root, 'lib/verified-product-specs.ts'), 'utf8')
 const pages = fs.readdirSync(path.join(root, 'app'), { recursive: true })
   .filter((file) => file.endsWith('.tsx'))
   .map((file) => fs.readFileSync(path.join(root, 'app', file), 'utf8'))
@@ -85,4 +86,13 @@ test('customer-facing pages and product fallback use tenant R2 images instead of
 test('configured Supabase product failures are not silently masked by fallback data', () => {
   assert.match(productsDb, /if \(error\) throw new Error/)
   assert.doesNotMatch(productsDb, /if \(error \|\| !data\?\.length\) return fallbackProducts/)
+})
+
+test('all fallback products use the Excel-verified specification map', () => {
+  const mappedProducts = products.match(/specifications: VERIFIED_PRODUCT_SPECS\['hn-[^']+'\]/g) ?? []
+  assert.equal(mappedProducts.length, 10)
+  assert.doesNotMatch(`${products}\n${pages}`, /Up to 60 A|0 – 1000 V|Up to 10 kW typical|RHEED/)
+  assert.equal((products.match(/optionalModules: \[\]/g) ?? []).length, 10)
+  assert.match(verifiedSpecs, /φ800–1800 mm/)
+  assert.match(verifiedSpecs, /ultimate pressure up to 5 × 10⁻⁴ Pa/)
 })

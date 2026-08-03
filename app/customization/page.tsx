@@ -82,7 +82,7 @@ const DIMENSIONS = [
       'In-situ quartz crystal microbalance (QCM) for film thickness',
       'Optical broadband monitoring for optical coating control',
       'Residual gas analyzer (RGA) port',
-      'RHEED / analytical instrument CF-flange ports (research systems)',
+      'Reserved analytical-instrument interface where specified',
       'Film stress and temperature measurement options',
     ],
   },

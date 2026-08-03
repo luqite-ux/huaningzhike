@@ -122,7 +122,7 @@ export const solutions: Solution[] = [
       'Substrate temperature control enables crystalline phase control and stress management',
       'Reactive gas control systems needed for compound oxide and nitride deposition',
       'Wafer-compatible substrate fixtures and load-locks improve throughput and cleanliness',
-      'In-situ diagnostic ports (RHEED, RGA, optical monitor) accelerate process qualification',
+      'Configurable monitoring interfaces support process qualification requirements',
     ],
   },
   {
@@ -135,7 +135,7 @@ export const solutions: Solution[] = [
     icon: 'FlaskConical',
     heroImage: IMG.MSR007,
     overview:
-      'Academic and industrial research institutions require PVD platforms that combine reproducible performance with maximum configurability. HUANING ZHIKE\'s laboratory R&D systems are engineered with this need in mind: CF-flanged stainless steel chambers, multiple source ports, flexible substrate fixtures, and interfaces for analytical instruments such as RHEED, optical monitors, quartz crystal monitors, and residual gas analyzers. Each system can be configured at the point of order and subsequently upgraded as research requirements evolve.',
+      'Academic and industrial research institutions require PVD platforms that combine repeatable process control with configurable chamber, source, fixture, and monitoring arrangements. HUANING ZHIKE laboratory systems are configured at the point of order according to the required deposition process and experiment workflow.',
     applications: [
       { name: 'Thin-Film Physics Research', description: 'Growth mechanism studies, in-situ characterization, and fundamental materials science of metallic, oxide, and nitride thin films.' },
       { name: 'Process Development for Scale-Up', description: 'Developing and validating PVD coating processes at lab scale before transfer to industrial production equipment.' },
