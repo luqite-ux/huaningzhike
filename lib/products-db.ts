@@ -49,7 +49,8 @@ export async function fetchProductsData(locale = DEFAULT_LOCALE): Promise<Produc
   const supabase = createSupabaseClient()
   if (!supabase) return fallbackProducts
   const { data, error } = await supabase.from('products').select('id,slug,model,category,name_i18n,description_i18n,overview_i18n,features_i18n,applications_i18n,advantages_i18n,image_url,specs,features,extra_data').eq('tenant_id', tenantId).eq('is_active', true).order('sort_order')
-  if (error || !data?.length) return fallbackProducts
+  if (error) throw new Error(`Unable to load tenant products: ${error.message}`)
+  if (!data?.length) return []
   return data.map((row) => mapProduct(row, locale))
 }
 

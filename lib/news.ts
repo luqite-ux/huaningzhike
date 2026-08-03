@@ -1,12 +1,7 @@
 /**
  * News article data layer.
  *
- * Currently no articles are published. The types and helper functions are
- * defined here so the /news and /news/[slug] routes are ready to accept real
- * Supabase data without structural changes.
- *
- * When articles are ready, replace the empty arrays and stub functions below
- * with real database queries.
+ * Published articles are loaded from the tenant's Supabase data.
  */
 
 export interface NewsArticle {
@@ -28,9 +23,7 @@ export interface NewsArticle {
   metaDescription?: string
 }
 
-/** All published articles, newest first.
- *  Replace with: `const { data } = await supabase.from('articles').select('*').order('published_at', { ascending: false })`
- */
+/** All published articles, newest first. */
 import { createSupabaseClient, tenantId } from '@/lib/supabase'
 import { DEFAULT_LOCALE, localizedText } from '@/lib/i18n'
 
@@ -52,16 +45,12 @@ export async function getAllArticles(locale = DEFAULT_LOCALE): Promise<NewsArtic
   return error ? [] : (data ?? []).map((row) => mapArticle(row, locale))
 }
 
-/** Single article by slug.
- *  Replace with: `const { data } = await supabase.from('articles').select('*').eq('slug', slug).single()`
- */
+/** Single published article by slug. */
 export async function getArticleBySlug(slug: string, locale = DEFAULT_LOCALE): Promise<NewsArticle | null> {
   return (await getAllArticles(locale)).find((article) => article.slug === slug) ?? null
 }
 
-/** All slugs for generateStaticParams.
- *  Replace with: `const { data } = await supabase.from('articles').select('slug')`
- */
+/** All published slugs for generateStaticParams. */
 export async function getAllArticleSlugs(): Promise<string[]> {
   return (await getAllArticles()).map((article) => article.slug)
 }

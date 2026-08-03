@@ -13,6 +13,7 @@ const solutions = fs.readFileSync(path.join(root, 'lib/solutions.ts'), 'utf8')
 const products = fs.readFileSync(path.join(root, 'lib/products.ts'), 'utf8')
 const productCatalog = fs.readFileSync(path.join(root, 'components/products/product-catalog.tsx'), 'utf8')
 const footer = fs.readFileSync(path.join(root, 'components/layout/site-footer.tsx'), 'utf8')
+const productsDb = fs.readFileSync(path.join(root, 'lib/products-db.ts'), 'utf8')
 const pages = fs.readdirSync(path.join(root, 'app'), { recursive: true })
   .filter((file) => file.endsWith('.tsx'))
   .map((file) => fs.readFileSync(path.join(root, 'app', file), 'utf8'))
@@ -79,4 +80,9 @@ test('public copy avoids unverified response times, hours, and inflated product 
 
 test('customer-facing pages and product fallback use tenant R2 images instead of v0 blobs', () => {
   assert.doesNotMatch(`${pages}\n${homeSections}\n${products}\n${hero}`, /hebbkx1anhila5yf|blob\.vercel-storage/)
+})
+
+test('configured Supabase product failures are not silently masked by fallback data', () => {
+  assert.match(productsDb, /if \(error\) throw new Error/)
+  assert.doesNotMatch(productsDb, /if \(error \|\| !data\?\.length\) return fallbackProducts/)
 })
