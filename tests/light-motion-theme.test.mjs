@@ -9,6 +9,7 @@ const hero = fs.readFileSync(path.join(root, 'components/home/hero-section.tsx')
 const homeSections = fs.readFileSync(path.join(root, 'components/home/home-sections.tsx'), 'utf8')
 const layout = fs.readFileSync(path.join(root, 'app/layout.tsx'), 'utf8')
 const header = fs.readFileSync(path.join(root, 'components/layout/site-header.tsx'), 'utf8')
+const solutions = fs.readFileSync(path.join(root, 'lib/solutions.ts'), 'utf8')
 const pages = fs.readdirSync(path.join(root, 'app'), { recursive: true })
   .filter((file) => file.endsWith('.tsx'))
   .map((file) => fs.readFileSync(path.join(root, 'app', file), 'utf8'))
@@ -34,6 +35,12 @@ test('brand assets use the transparent customer logo and HN favicon', () => {
 test('solution cards use clean customer R2 images without dark wash overlays', () => {
   assert.match(homeSections, /pub-c7a22068052144a5805830c30d280128\.r2\.dev/)
   assert.doesNotMatch(homeSections, /from-\[#0B1E3D\]\/80/)
+})
+
+test('multi-arc and magnetron products use different customer-supplied views', () => {
+  assert.match(homeSections, /products\/hn-ma-001\/01\.png/)
+  assert.match(homeSections, /products\/hn-ms-002\/02\.png/)
+  assert.match(solutions, /MS002:\s+'[^']+\/hn-ms-002\/02\.png'/)
 })
 
 test('homepage exposes rich motion with an accessible reduced-motion fallback', () => {
