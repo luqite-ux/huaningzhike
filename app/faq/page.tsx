@@ -139,7 +139,7 @@ export default function FaqPage() {
     <div className="min-h-screen bg-transparent">
       {/* ── Page header ── */}
       <div className="relative overflow-hidden pt-28 pb-14">
-        <div className="absolute inset-0 bg-gradient-to-b from-[#030B16] via-[#070F1F] to-[#050E1A]" aria-hidden="true" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#fffdf8] via-[#f4f8ff] to-[#eef5ff]" aria-hidden="true" />
         <div className="absolute inset-0 tech-grid-bg opacity-40" aria-hidden="true" />
         <div
           className="absolute -top-32 left-1/2 -translate-x-1/2 w-[600px] h-[600px] rounded-full opacity-[0.04]"

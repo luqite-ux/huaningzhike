@@ -25,7 +25,7 @@ export default function SolutionsPage() {
     <div className="min-h-screen bg-transparent">
       {/* Page header */}
       <div className="relative overflow-hidden pt-28 pb-14">
-        <div className="absolute inset-0 bg-gradient-to-b from-[#030B16] via-[#070F1F] to-[#050E1A]" aria-hidden="true" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#fffdf8] via-[#f4f8ff] to-[#eef5ff]" aria-hidden="true" />
         <div className="absolute inset-0 tech-grid-bg opacity-40" aria-hidden="true" />
         <div className="absolute bottom-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-[rgba(200,168,75,0.25)] to-transparent" aria-hidden="true" />
 
@@ -51,7 +51,7 @@ export default function SolutionsPage() {
                 className="group glass-card rounded-2xl overflow-hidden border border-[rgba(200,168,75,0.1)] hover:border-[rgba(200,168,75,0.3)] transition-all duration-300 hover:shadow-[0_8px_40px_rgba(200,168,75,0.08)] flex flex-col"
               >
                 {/* Hero image */}
-                <div className="relative h-60 bg-gradient-to-br from-[#0A1830] to-[#050E1A] overflow-hidden">
+                <div className="relative h-60 bg-gradient-to-br from-white to-[#eaf3ff] overflow-hidden">
                   <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(27,85,196,0.18)_0%,transparent_70%)]" aria-hidden="true" />
                   <Image
                     src={solution.heroImage}

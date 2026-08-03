@@ -66,7 +66,14 @@ export const metadata: Metadata = {
     images: [DEFAULT_OG_IMAGE],
   },
   alternates: { canonical: SITE_URL },
-  icons: { icon: '/icon.svg', shortcut: '/icon.svg', apple: '/apple-icon.png' },
+  icons: {
+    icon: [
+      { url: '/favicon.png', type: 'image/png', sizes: '512x512' },
+      { url: '/icon-light-32x32.png', type: 'image/png', sizes: '32x32' },
+    ],
+    shortcut: '/favicon.png',
+    apple: '/apple-icon.png',
+  },
   robots: {
     index: true,
     follow: true,
@@ -82,7 +89,7 @@ export const metadata: Metadata = {
 }
 
 export const viewport: Viewport = {
-  themeColor: '#050E1A',
+  themeColor: '#F7FAFE',
   width: 'device-width',
   initialScale: 1,
   maximumScale: 5,

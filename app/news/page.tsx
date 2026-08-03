@@ -29,7 +29,7 @@ export default async function NewsPage() {
     <div className="min-h-screen bg-transparent">
       {/* ── Page header ── */}
       <div className="relative overflow-hidden pt-28 pb-14">
-        <div className="absolute inset-0 bg-gradient-to-b from-[#030B16] via-[#070F1F] to-[#050E1A]" aria-hidden="true" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#fffdf8] via-[#f4f8ff] to-[#eef5ff]" aria-hidden="true" />
         <div className="absolute inset-0 tech-grid-bg opacity-40" aria-hidden="true" />
         <div
           className="absolute -top-40 right-0 w-[500px] h-[500px] rounded-full opacity-[0.04]"
@@ -85,7 +85,7 @@ export default async function NewsPage() {
                 className="glass-card rounded-2xl border border-[rgba(200,168,75,0.1)] hover:border-[rgba(200,168,75,0.3)] transition-colors group overflow-hidden focus-visible:outline-2 focus-visible:outline-[var(--gold)]"
               >
                 {article.coverImage && (
-                  <div className="relative h-48 bg-[#030B16] overflow-hidden">
+                  <div className="relative h-48 bg-[#f4f8ff] overflow-hidden">
                     {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img
                       src={article.coverImage}

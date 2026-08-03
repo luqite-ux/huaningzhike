@@ -94,7 +94,7 @@ export default async function ProductDetailPage({
       ]} />
       {/* ── Page header band ── */}
       <div className="relative overflow-hidden pt-28 pb-10">
-        <div className="absolute inset-0 bg-gradient-to-b from-[#030B16] via-[#070F1F] to-[#050E1A]" aria-hidden="true" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#fffdf8] via-[#f4f8ff] to-[#eef5ff]" aria-hidden="true" />
         <div className="absolute inset-0 tech-grid-bg opacity-40" aria-hidden="true" />
         <div className="absolute bottom-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-[rgba(200,168,75,0.2)] to-transparent" aria-hidden="true" />
 
@@ -257,7 +257,7 @@ export default async function ProductDetailPage({
                       href={`/products/${rel.slug}`}
                       className="group glass-card rounded-xl overflow-hidden border border-[rgba(200,168,75,0.1)] hover:border-[rgba(200,168,75,0.3)] transition-all duration-200 hover:shadow-[0_4px_24px_rgba(200,168,75,0.08)] focus-visible:outline-2 focus-visible:outline-[var(--gold)]"
                     >
-                      <div className="relative h-36 bg-gradient-to-br from-[#0A1830] to-[#050E1A]">
+                      <div className="relative h-36 bg-gradient-to-br from-white to-[#eaf3ff]">
                         <Image
                           src={rel.image}
                           alt={rel.name}

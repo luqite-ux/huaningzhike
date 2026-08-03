@@ -67,7 +67,7 @@ export default async function SolutionDetailPage({
     <div className="min-h-screen bg-transparent">
       {/* ── Hero banner ── */}
       <div className="relative overflow-hidden pt-28 pb-0">
-        <div className="absolute inset-0 bg-gradient-to-b from-[#030B16] via-[#070F1F] to-[#050E1A]" aria-hidden="true" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#fffdf8] via-[#f4f8ff] to-[#eef5ff]" aria-hidden="true" />
         <div className="absolute inset-0 tech-grid-bg opacity-40" aria-hidden="true" />
 
         <div className="relative max-w-[1400px] mx-auto px-4 md:px-8 pb-14">
@@ -116,7 +116,7 @@ export default async function SolutionDetailPage({
             <div className="relative">
               <div className="absolute inset-8 rounded-full bg-[radial-gradient(ellipse_at_center,rgba(27,85,196,0.2)_0%,transparent_70%)] blur-2xl" aria-hidden="true" />
               <div className="relative glass-card rounded-2xl gold-border-glow overflow-hidden">
-                <div className="relative h-72 md:h-80 bg-gradient-to-br from-[#0A1830] to-[#050E1A]">
+                <div className="relative h-72 md:h-80 bg-gradient-to-br from-white to-[#eaf3ff]">
                   <Image
                     src={solution.heroImage}
                     alt={solution.title}
@@ -212,7 +212,7 @@ export default async function SolutionDetailPage({
                     href={`/products/${prod.slug}`}
                     className="group flex items-center gap-3 p-3 rounded-lg hover:bg-[rgba(200,168,75,0.06)] transition-colors focus-visible:outline-2 focus-visible:outline-[var(--gold)]"
                   >
-                    <div className="relative w-16 h-12 rounded bg-[#0A1830] shrink-0 overflow-hidden">
+                    <div className="relative w-16 h-12 rounded bg-[#eaf3ff] shrink-0 overflow-hidden">
                       <Image
                         src={prod.image}
                         alt={prod.name}

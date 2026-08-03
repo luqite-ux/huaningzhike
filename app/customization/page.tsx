@@ -126,7 +126,7 @@ export default function CustomizationPage() {
     <div className="min-h-screen bg-transparent">
       {/* ── Header ── */}
       <div className="relative overflow-hidden pt-28 pb-14">
-        <div className="absolute inset-0 bg-gradient-to-b from-[#030B16] via-[#070F1F] to-[#050E1A]" aria-hidden="true" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#fffdf8] via-[#f4f8ff] to-[#eef5ff]" aria-hidden="true" />
         <div className="absolute inset-0 tech-grid-bg opacity-40" aria-hidden="true" />
         <div className="absolute bottom-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-[rgba(200,168,75,0.25)] to-transparent" aria-hidden="true" />
 
@@ -158,7 +158,7 @@ export default function CustomizationPage() {
             <div className="relative hidden lg:block">
               <div className="absolute inset-8 rounded-full bg-[radial-gradient(ellipse_at_center,rgba(27,85,196,0.2)_0%,transparent_70%)] blur-2xl" aria-hidden="true" />
               <div className="glass-card rounded-2xl gold-border-glow overflow-hidden">
-                <div className="relative h-72 bg-gradient-to-br from-[#0A1830] to-[#050E1A]">
+                <div className="relative h-72 bg-gradient-to-br from-white to-[#eaf3ff]">
                   <Image
                     src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/api-attachments/wsKWupUDPtfRtscrWX29W-rodxdRoCKrSCHPQYtnb20FaBoMDoYy.png"
                     alt="HUANING ZHIKE customized PVD coating system"
@@ -244,7 +244,7 @@ export default function CustomizationPage() {
       </section>
 
       {/* ── Facility facts banner ── */}
-      <section aria-labelledby="facility-heading" className="py-14 bg-[#030B16]">
+      <section aria-labelledby="facility-heading" className="py-14 bg-[#f4f8ff]">
         <div className="max-w-[1400px] mx-auto px-4 md:px-8">
           <div className="glass-card rounded-2xl p-8 md:p-12 gold-border-glow">
             <div className="grid md:grid-cols-2 gap-8 items-center">

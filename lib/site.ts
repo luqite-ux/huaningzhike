@@ -4,7 +4,7 @@ export const SITE_NAME = 'HUANING ZHIKE'
 export const SITE_URL = (process.env.NEXT_PUBLIC_SITE_URL || 'https://huaningzhike.vercel.app').replace(/\/$/, '')
 export const COMPANY_NAME =
   'Huaning Intelligent Technology (Hangzhou) Intelligent Equipment Manufacturing Co., Ltd.'
-export const DEFAULT_OG_IMAGE = '/images/logo.png'
+export const DEFAULT_OG_IMAGE = '/images/logo-transparent.png'
 
 export function absoluteUrl(path = '/') {
   return new URL(path, SITE_URL).toString()

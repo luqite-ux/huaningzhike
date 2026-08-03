@@ -63,19 +63,19 @@ export function SiteHeader() {
       <header
         className={`fixed top-0 inset-x-0 z-50 transition-all duration-300 ${
           scrolled
-            ? 'bg-transparent/95 backdrop-blur-md border-b border-[rgba(200,168,75,0.15)] shadow-[0_4px_32px_rgba(0,0,0,0.4)]'
-            : 'bg-gradient-to-b from-[#050E1A]/80 to-transparent'
+            ? 'bg-white/90 backdrop-blur-xl border-b border-[rgba(27,85,196,0.10)] shadow-[0_8px_32px_rgba(27,85,196,0.10)]'
+            : 'bg-gradient-to-b from-white/85 to-white/30 backdrop-blur-sm'
         }`}
       >
         <div className="max-w-[1400px] mx-auto px-4 md:px-8 flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
           <Link href="/" className="flex items-center shrink-0" aria-label="HUANING ZHIKE — home">
             <Image
-              src="/images/logo.png"
+              src="/images/logo-transparent.png"
               alt="HUANING ZHIKE logo"
-              width={200}
-              height={48}
-              className="h-10 md:h-12 w-auto object-contain"
+              width={360}
+              height={120}
+              className="h-14 md:h-16 w-auto object-contain scale-110 origin-left"
               priority
             />
           </Link>
@@ -189,17 +189,17 @@ export function SiteHeader() {
 
         {/* Drawer panel */}
         <div
-          className={`absolute inset-y-0 right-0 w-72 bg-[#0B1E3D] border-l border-[rgba(200,168,75,0.12)] flex flex-col transition-transform duration-300 ease-out ${
+          className={`absolute inset-y-0 right-0 w-72 bg-white border-l border-[rgba(27,85,196,0.12)] flex flex-col transition-transform duration-300 ease-out ${
             mobileOpen ? 'translate-x-0' : 'translate-x-full'
           }`}
         >
           <div className="flex items-center justify-between px-5 py-5 border-b border-[rgba(200,168,75,0.1)]">
             <Image
-              src="/images/logo.png"
+              src="/images/logo-transparent.png"
               alt="HUANING ZHIKE"
               width={160}
               height={38}
-              className="h-9 w-auto object-contain"
+              className="h-12 w-auto object-contain"
             />
             <button
               type="button"

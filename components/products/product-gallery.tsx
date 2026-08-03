@@ -28,7 +28,7 @@ export function ProductGallery({ images, productName }: ProductGalleryProps) {
       <div className="glass-card rounded-2xl overflow-hidden gold-border-glow">
         {/* Primary image */}
         <div
-          className="relative h-80 md:h-[420px] bg-gradient-to-br from-[#0A1830] to-[#050E1A] cursor-zoom-in group"
+          className="relative h-80 md:h-[420px] bg-gradient-to-br from-white to-[#eaf3ff] cursor-zoom-in group"
           role="button"
           tabIndex={0}
           aria-label={`View ${productName} image ${activeIndex + 1} of ${images.length} in full size`}
@@ -107,7 +107,7 @@ export function ProductGallery({ images, productName }: ProductGalleryProps) {
                   alt={`${productName} thumbnail ${i + 1}`}
                   fill
                   sizes="80px"
-                  className="object-contain p-1 bg-[#0A1830]"
+                  className="object-contain p-1 bg-[#eaf3ff]"
                 />
               </button>
             ))}
@@ -121,7 +121,7 @@ export function ProductGallery({ images, productName }: ProductGalleryProps) {
           role="dialog"
           aria-modal="true"
           aria-label={`${productName} image viewer`}
-          className="fixed inset-0 z-[100] flex items-center justify-center bg-[#030B16]/95 backdrop-blur-md animate-fade-in"
+          className="fixed inset-0 z-[100] flex items-center justify-center bg-[#f4f8ff]/95 backdrop-blur-md animate-fade-in"
           onKeyDown={handleKeyDown}
           tabIndex={-1}
         >

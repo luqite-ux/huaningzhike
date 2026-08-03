@@ -79,7 +79,7 @@ export default function AboutPage() {
     <div className="min-h-screen bg-transparent">
       {/* ── Header ── */}
       <div className="relative overflow-hidden pt-28 pb-14">
-        <div className="absolute inset-0 bg-gradient-to-b from-[#030B16] via-[#070F1F] to-[#050E1A]" aria-hidden="true" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#fffdf8] via-[#f4f8ff] to-[#eef5ff]" aria-hidden="true" />
         <div className="absolute inset-0 tech-grid-bg opacity-40" aria-hidden="true" />
         <div className="absolute bottom-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-[rgba(200,168,75,0.25)] to-transparent" aria-hidden="true" />
 
@@ -134,7 +134,7 @@ export default function AboutPage() {
       </div>
 
       {/* ── Facility facts ── */}
-      <section aria-labelledby="facility-heading" className="py-14 bg-[#030B16]">
+      <section aria-labelledby="facility-heading" className="py-14 bg-[#f4f8ff]">
         <div className="max-w-[1400px] mx-auto px-4 md:px-8">
           <h2 id="facility-heading" className="sr-only">Facility and manufacturing facts</h2>
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
@@ -173,7 +173,7 @@ export default function AboutPage() {
       </section>
 
       {/* ── Equipment showcase ── */}
-      <section aria-labelledby="equipment-heading" className="py-14 bg-[#030B16]">
+      <section aria-labelledby="equipment-heading" className="py-14 bg-[#f4f8ff]">
         <div className="max-w-[1400px] mx-auto px-4 md:px-8">
           <div className="text-center mb-10">
             <h2 id="equipment-heading" className="font-heading text-3xl font-bold text-[var(--foreground)] mb-4">
@@ -186,7 +186,7 @@ export default function AboutPage() {
           <div className="grid sm:grid-cols-3 gap-5 mb-8">
             {EQUIPMENT_IMAGES.map((img) => (
               <div key={img.alt} className="glass-card rounded-xl overflow-hidden border border-[rgba(200,168,75,0.1)]">
-                <div className="relative h-52 bg-gradient-to-br from-[#0A1830] to-[#050E1A]">
+                <div className="relative h-52 bg-gradient-to-br from-white to-[#eaf3ff]">
                   <Image
                     src={img.src}
                     alt={img.alt}

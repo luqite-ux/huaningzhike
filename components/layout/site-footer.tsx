@@ -34,7 +34,7 @@ const companyLinks = [
 
 export function SiteFooter() {
   return (
-    <footer className="relative bg-[#030B16] border-t border-[rgba(200,168,75,0.12)] overflow-hidden">
+    <footer className="relative bg-[#f4f8ff] border-t border-[rgba(200,168,75,0.12)] overflow-hidden">
       {/* Decorative gradient top edge */}
       <div className="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-[rgba(200,168,75,0.4)] to-transparent" />
 
@@ -67,11 +67,11 @@ export function SiteFooter() {
           <div>
             <Link href="/" aria-label="HUANING ZHIKE home">
               <Image
-                src="/images/logo.png"
+                src="/images/logo-transparent.png"
                 alt="HUANING ZHIKE"
                 width={200}
                 height={48}
-                className="h-11 w-auto object-contain mb-5"
+                className="h-14 w-auto object-contain mb-5"
               />
             </Link>
             <p className="text-[var(--steel)] text-sm leading-relaxed mb-6">

@@ -60,7 +60,7 @@ function SectionHeader({ eyebrow, title, subtitle }: { eyebrow: string; title: R
 export function ProductLineGateways() {
   return (
     <section id="product-lines" aria-labelledby="product-lines-heading" className="relative py-20 md:py-28 overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-b from-[#050E1A] via-[#070F1F] to-[#050E1A]" aria-hidden="true" />
+      <div className="absolute inset-0 bg-gradient-to-b from-[#fffdf8] via-[#f4f8ff] to-[#eef5ff]" aria-hidden="true" />
       <div className="relative max-w-[1400px] mx-auto px-4 md:px-8">
         <RevealSection>
           <SectionHeader
@@ -96,7 +96,7 @@ export function ProductLineGateways() {
                 aria-label={`View ${line.title}`}
               >
                 {/* Image area */}
-                <div className="relative h-64 bg-gradient-to-br from-[#0A1830] to-[#050E1A] overflow-hidden">
+                <div className="relative h-64 bg-gradient-to-br from-white to-[#eaf3ff] overflow-hidden">
                   <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(27,85,196,0.15)_0%,transparent_70%)]" aria-hidden="true" />
                   <Image
                     src={line.image}
@@ -141,7 +141,7 @@ export function ProductLineGateways() {
 export function FeaturedEquipment() {
   return (
     <section aria-labelledby="featured-equipment-heading" className="relative py-20 md:py-28 overflow-hidden">
-      <div className="absolute inset-0 bg-[#030B16]" aria-hidden="true" />
+      <div className="absolute inset-0 bg-[#f4f8ff]" aria-hidden="true" />
       <div className="absolute inset-0 tech-grid-bg opacity-40" aria-hidden="true" />
 
       <div className="relative max-w-[1400px] mx-auto px-4 md:px-8">
@@ -158,7 +158,7 @@ export function FeaturedEquipment() {
             <RevealSection key={product.slug}>
               <article className="group glass-card rounded-xl overflow-hidden border border-[rgba(200,168,75,0.1)] hover:border-[rgba(200,168,75,0.3)] transition-all duration-300 hover:shadow-[0_4px_32px_rgba(200,168,75,0.08)] flex flex-col h-full">
                 {/* Image */}
-                <div className="relative h-44 bg-gradient-to-br from-[#0A1830] to-[#060E1C] overflow-hidden">
+                <div className="relative h-44 bg-gradient-to-br from-white to-[#eaf3ff] overflow-hidden">
                   <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(27,85,196,0.12)_0%,transparent_70%)]" aria-hidden="true" />
                   <Image
                     src={product.image}
@@ -270,7 +270,7 @@ const TECHNOLOGIES = [
 export function DepositionTechnologyMatrix() {
   return (
     <section aria-labelledby="tech-matrix-heading" className="relative py-20 md:py-28 overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-b from-[#050E1A] to-[#070F1F]" aria-hidden="true" />
+      <div className="absolute inset-0 bg-gradient-to-b from-[#f8fbff] to-[#edf4ff]" aria-hidden="true" />
 
       <div className="relative max-w-[1400px] mx-auto px-4 md:px-8">
         <RevealSection>
@@ -360,7 +360,7 @@ const SOLUTIONS = [
 export function SolutionPathways() {
   return (
     <section aria-labelledby="solutions-heading" className="relative py-20 md:py-28 overflow-hidden">
-      <div className="absolute inset-0 bg-[#030B16]" aria-hidden="true" />
+      <div className="absolute inset-0 bg-[#f4f8ff]" aria-hidden="true" />
       <div className="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-[rgba(200,168,75,0.25)] to-transparent" aria-hidden="true" />
 
       <div className="relative max-w-[1400px] mx-auto px-4 md:px-8">
@@ -382,7 +382,7 @@ export function SolutionPathways() {
                   className="group glass-card rounded-xl overflow-hidden border border-[rgba(200,168,75,0.1)] hover:border-[rgba(200,168,75,0.3)] transition-all duration-300 flex flex-col focus-visible:outline-2 focus-visible:outline-[var(--gold)]"
                   aria-label={`View ${sol.title} solutions`}
                 >
-                  <div className="relative h-40 bg-gradient-to-br from-[#0A1830] to-[#050E1A] overflow-hidden">
+                  <div className="relative h-40 bg-gradient-to-br from-white to-[#eaf3ff] overflow-hidden">
                     <Image
                       src={sol.image}
                       alt={sol.title}
@@ -433,7 +433,7 @@ const FACILITY_FACTS = [
 export function FacilityFacts() {
   return (
     <section aria-labelledby="facility-heading" className="relative py-16 md:py-20 overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-r from-[#070F1F] via-[#0A1530] to-[#070F1F]" aria-hidden="true" />
+      <div className="absolute inset-0 bg-gradient-to-r from-[#f5f9ff] via-[#fffdf7] to-[#eef5ff]" aria-hidden="true" />
       <div className="absolute inset-0 tech-grid-bg opacity-30" aria-hidden="true" />
       <div className="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-[rgba(200,168,75,0.2)] to-transparent" aria-hidden="true" />
       <div className="absolute bottom-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-[rgba(200,168,75,0.2)] to-transparent" aria-hidden="true" />
@@ -564,7 +564,7 @@ export function CustomProjectProcess() {
 export function InquiryCtaSection() {
   return (
     <section aria-labelledby="inquiry-cta-heading" className="relative py-20 overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-br from-[#0A1830] via-[#0F2245] to-[#0A1830]" aria-hidden="true" />
+      <div className="absolute inset-0 bg-gradient-to-br from-[#edf5ff] via-[#fffdf7] to-[#e8f2ff]" aria-hidden="true" />
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_70%_80%_at_50%_50%,rgba(200,168,75,0.07)_0%,transparent_70%)]" aria-hidden="true" />
       <div className="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-[rgba(200,168,75,0.4)] to-transparent" aria-hidden="true" />
 

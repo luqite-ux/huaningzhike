@@ -250,7 +250,7 @@ function ProductCard({ product }: { product: Product }) {
   return (
     <article className="group glass-card rounded-xl overflow-hidden border border-[rgba(200,168,75,0.1)] hover:border-[rgba(200,168,75,0.3)] transition-all duration-300 hover:shadow-[0_4px_32px_rgba(200,168,75,0.08)] flex flex-col">
       {/* Image */}
-      <div className="relative h-48 bg-gradient-to-br from-[#0A1830] to-[#060E1C] overflow-hidden">
+      <div className="relative h-48 bg-gradient-to-br from-white to-[#eaf3ff] overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(27,85,196,0.12)_0%,transparent_70%)]" aria-hidden="true" />
         <Image
           src={product.image}
