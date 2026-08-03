@@ -46,14 +46,14 @@ export interface Product {
 const IMG = {
   MA001:    'https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/c0542148-cfbe-4c44-b7f2-7b36465032a2/products/hn-ma-001/02.png',
   MS002:    'https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/c0542148-cfbe-4c44-b7f2-7b36465032a2/products/hn-ms-002/01.png',
-  MAMS003:  'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/api-attachments/As2wX5o00gI89Tbyu2N8p-epiZDHJWaVZB5Vj6qKZH03qvxl8p4L.png',
-  EB004:    'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/api-attachments/02b97i8SFXHFCYt2e7uUo-9FNY9SD1PetmILfEkaMCHjpwri4EIU.jpg',
-  MSEB005:  'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/api-attachments/wsKWupUDPtfRtscrWX29W-rodxdRoCKrSCHPQYtnb20FaBoMDoYy.png',
-  MAR006:   'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/api-attachments/bu6Z5al3rNJwMo5AjhqrA-URYC4vBFofNGkqNACBY8OF2j9Xrq9w.png',
-  MSR007:   'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/api-attachments/rSAgN2qxNFIQ9NB93uSHO-5cVa1ak9FMvEt90tBwru8a2xqt2sgy.png',
-  MAMSR008: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/api-attachments/gmOaSfAfqZ3uJH47ZSJuv-5FyqgyTUUUrT91AT2luOc51tMbhe3p.png',
-  EBR009:   'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/api-attachments/VPKnrEEWXFQehfDrD4W88-9dXBkOQwvxqTPKELY4FixZfzpzyOO8.png',
-  MSEBR010: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/api-attachments/wsKWupUDPtfRtscrWX29W-rodxdRoCKrSCHPQYtnb20FaBoMDoYy.png',
+  MAMS003:  'https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/c0542148-cfbe-4c44-b7f2-7b36465032a2/products/hn-ma-ms-003/01.png',
+  EB004:    'https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/c0542148-cfbe-4c44-b7f2-7b36465032a2/products/hn-eb-004/01.jpg',
+  MSEB005:  'https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/c0542148-cfbe-4c44-b7f2-7b36465032a2/products/hn-ms-eb-005/01.png',
+  MAR006:   'https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/c0542148-cfbe-4c44-b7f2-7b36465032a2/products/hn-ma-r-006/01.png',
+  MSR007:   'https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/c0542148-cfbe-4c44-b7f2-7b36465032a2/products/hn-ms-r-007/01.png',
+  MAMSR008: 'https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/c0542148-cfbe-4c44-b7f2-7b36465032a2/products/hn-ma-ms-r-008/01.png',
+  EBR009:   'https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/c0542148-cfbe-4c44-b7f2-7b36465032a2/products/hn-eb-r-009/01.png',
+  MSEBR010: 'https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/c0542148-cfbe-4c44-b7f2-7b36465032a2/products/hn-ms-eb-r-010/01.png',
 } as const
 
 /* ─── Product Catalog ─────────────────────────────────────────────────────────── */

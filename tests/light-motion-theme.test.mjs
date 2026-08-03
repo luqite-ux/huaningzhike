@@ -76,3 +76,7 @@ test('public copy avoids unverified response times, hours, and inflated product 
   assert.doesNotMatch(pages, /responds within one business day|Business Hours/i)
   assert.doesNotMatch(products, /preferred platform|unparalleled flexibility|leading universities/i)
 })
+
+test('customer-facing pages and product fallback use tenant R2 images instead of v0 blobs', () => {
+  assert.doesNotMatch(`${pages}\n${homeSections}\n${products}\n${hero}`, /hebbkx1anhila5yf|blob\.vercel-storage/)
+})

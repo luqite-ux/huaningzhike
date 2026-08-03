@@ -77,7 +77,7 @@ export function ProductLineGateways() {
               title: 'Industrial PVD Coating Systems',
               desc: 'High-throughput vacuum coating platforms engineered for sustained batch production. Multi-arc, sputtering, electron beam, and composite configurations for tool & die, decorative hard coating, optical, and semiconductor production environments.',
               href: '/products?line=industrial',
-              image: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/api-attachments/As2wX5o00gI89Tbyu2N8p-epiZDHJWaVZB5Vj6qKZH03qvxl8p4L.png',
+              image: 'https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/c0542148-cfbe-4c44-b7f2-7b36465032a2/products/hn-ma-ms-003/01.png',
               models: ['HN-MA-001', 'HN-MS-002', 'HN-MA-MS-003', 'HN-EB-004', 'HN-MS-EB-005'],
             },
             {
@@ -85,7 +85,7 @@ export function ProductLineGateways() {
               title: 'Lab R&D PVD Platforms',
               desc: 'Compact, configurable coating systems for university laboratories, research institutes, and industrial R&D centers. Identical deposition physics at research scale, with accessible chamber designs that promote rapid process iteration.',
               href: '/products?line=lab',
-              image: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/api-attachments/rSAgN2qxNFIQ9NB93uSHO-5cVa1ak9FMvEt90tBwru8a2xqt2sgy.png',
+              image: 'https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/c0542148-cfbe-4c44-b7f2-7b36465032a2/products/hn-ms-r-007/01.png',
               models: ['HN-MA-R-006', 'HN-MS-R-007', 'HN-MA-MS-R-008', 'HN-EB-R-009', 'HN-MS-EB-R-010'],
             },
           ].map((line, i) => (

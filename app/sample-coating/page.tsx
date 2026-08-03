@@ -96,7 +96,7 @@ export default function SampleCoatingPage() {
               <div className="glass-card rounded-2xl gold-border-glow overflow-hidden">
                 <div className="relative h-72 bg-gradient-to-br from-white to-[#eaf3ff]">
                   <Image
-                    src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/api-attachments/rSAgN2qxNFIQ9NB93uSHO-5cVa1ak9FMvEt90tBwru8a2xqt2sgy.png"
+                    src="https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/c0542148-cfbe-4c44-b7f2-7b36465032a2/products/hn-ms-r-007/01.png"
                     alt="HUANING ZHIKE laboratory PVD system for process trials"
                     fill
                     sizes="50vw"

@@ -5,12 +5,9 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { ArrowRight, ChevronDown } from 'lucide-react'
 
-const HERO_IMAGE =
-  'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/api-attachments/OMLmTfMWkAzxilvxGljgB12JiQibsK.png'
-
 // We use the large industrial machine as hero
 const FLAGSHIP_IMAGE =
-  'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/api-attachments/As2wX5o00gI89Tbyu2N8p-epiZDHJWaVZB5Vj6qKZH03qvxl8p4L.png'
+  'https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/c0542148-cfbe-4c44-b7f2-7b36465032a2/products/hn-ms-002/01.png'
 
 export function HeroSection() {
   const canvasRef = useRef<HTMLCanvasElement>(null)

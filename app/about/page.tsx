@@ -61,15 +61,15 @@ const MARKETS = [
 
 const EQUIPMENT_IMAGES = [
   {
-    src: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/api-attachments/As2wX5o00gI89Tbyu2N8p-epiZDHJWaVZB5Vj6qKZH03qvxl8p4L.png',
+    src: 'https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/c0542148-cfbe-4c44-b7f2-7b36465032a2/products/hn-ma-ms-003/01.png',
     alt: 'HUANING ZHIKE industrial magnetron sputtering system',
   },
   {
-    src: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/api-attachments/5TbgUxh1IgKXhMxYkuANk-8rvIJhCZWXDnamL5VbWlb5j73DWs1U.png',
+    src: 'https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/c0542148-cfbe-4c44-b7f2-7b36465032a2/products/hn-ma-001/02.png',
     alt: 'HUANING ZHIKE large-chamber industrial system',
   },
   {
-    src: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/api-attachments/rSAgN2qxNFIQ9NB93uSHO-5cVa1ak9FMvEt90tBwru8a2xqt2sgy.png',
+    src: 'https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/c0542148-cfbe-4c44-b7f2-7b36465032a2/products/hn-ms-r-007/01.png',
     alt: 'HUANING ZHIKE laboratory research PVD platform',
   },
 ]
