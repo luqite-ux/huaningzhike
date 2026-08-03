@@ -66,3 +66,13 @@ test('dark footer CTA explicitly resets its foreground colors', () => {
   assert.match(footer, /<h2 className="[^"]*text-white[^"]*">[\s\S]{0,80}Ready to discuss your coating process\?/)
   assert.match(footer, /<p className="[^"]*text-\[#C8D5EA\][^"]*">[\s\S]{0,120}Our engineers are available/)
 })
+
+test('light footer uses accessible dark accents instead of low-contrast gold text', () => {
+  assert.doesNotMatch(footer, /<h3 className="[^"]*text-\[var\(--gold\)\]/)
+  assert.match(footer, /text-\[#755B10\]/)
+})
+
+test('public copy avoids unverified response times, hours, and inflated product claims', () => {
+  assert.doesNotMatch(pages, /responds within one business day|Business Hours/i)
+  assert.doesNotMatch(products, /preferred platform|unparalleled flexibility|leading universities/i)
+})

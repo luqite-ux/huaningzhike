@@ -118,7 +118,7 @@ export function SiteFooter() {
 
           {/* Products column */}
           <div>
-            <h3 className="font-heading text-xs font-semibold uppercase tracking-widest text-[var(--gold)] mb-5">
+            <h3 className="font-heading text-xs font-semibold uppercase tracking-widest text-[#755B10] mb-5">
               Equipment
             </h3>
             <ul className="space-y-2.5">
@@ -137,7 +137,7 @@ export function SiteFooter() {
 
           {/* Solutions column */}
           <div>
-            <h3 className="font-heading text-xs font-semibold uppercase tracking-widest text-[var(--gold)] mb-5">
+            <h3 className="font-heading text-xs font-semibold uppercase tracking-widest text-[#755B10] mb-5">
               Solutions
             </h3>
             <ul className="space-y-2.5 mb-8">
@@ -153,7 +153,7 @@ export function SiteFooter() {
               ))}
             </ul>
 
-            <h3 className="font-heading text-xs font-semibold uppercase tracking-widest text-[var(--gold)] mb-5">
+            <h3 className="font-heading text-xs font-semibold uppercase tracking-widest text-[#755B10] mb-5">
               Company
             </h3>
             <ul className="space-y-2.5">
@@ -172,7 +172,7 @@ export function SiteFooter() {
 
           {/* Quick contact column */}
           <div>
-            <h3 className="font-heading text-xs font-semibold uppercase tracking-widest text-[var(--gold)] mb-5">
+            <h3 className="font-heading text-xs font-semibold uppercase tracking-widest text-[#755B10] mb-5">
               Quick Inquiry
             </h3>
             <p className="text-[var(--steel)] text-sm leading-relaxed mb-5">
@@ -187,13 +187,13 @@ export function SiteFooter() {
               </Link>
               <Link
                 href="/contact?type=process"
-                className="btn-outline-gold w-full flex items-center justify-center gap-2 py-3 rounded text-sm focus-visible:outline-2 focus-visible:outline-[var(--gold)]"
+                className="btn-outline-gold w-full flex items-center justify-center gap-2 py-3 rounded text-sm !text-[#755B10] focus-visible:outline-2 focus-visible:outline-[#755B10]"
               >
                 Discuss Your Process
               </Link>
               <Link
                 href="/sample-coating"
-                className="btn-outline-gold w-full flex items-center justify-center gap-2 py-3 rounded text-sm focus-visible:outline-2 focus-visible:outline-[var(--gold)]"
+                className="btn-outline-gold w-full flex items-center justify-center gap-2 py-3 rounded text-sm !text-[#755B10] focus-visible:outline-2 focus-visible:outline-[#755B10]"
               >
                 Send Your Samples
               </Link>

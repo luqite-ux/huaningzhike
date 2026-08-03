@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { MapPin, Phone, Mail, Globe, Clock } from 'lucide-react'
+import { MapPin, Phone, Mail, Globe } from 'lucide-react'
 import { Breadcrumbs } from '@/components/layout/breadcrumbs'
 import { InquiryForm } from '@/components/inquiry-form'
 import { withPageSocial } from '@/lib/site'
@@ -36,12 +36,6 @@ const CONTACT_INFO = [
     value: 'www.huaningzhike.com',
     href: 'https://www.huaningzhike.com',
   },
-  {
-    icon: Clock,
-    label: 'Business Hours',
-    value: 'Monday – Friday, 08:30 – 17:30 CST (UTC+8)',
-    href: undefined,
-  },
 ]
 
 export default function ContactPage() {
@@ -59,7 +53,7 @@ export default function ContactPage() {
             Contact <span className="gold-gradient-text">HUANING ZHIKE</span>
           </h1>
           <p className="text-[var(--steel-light)] max-w-2xl text-lg leading-relaxed">
-            Submit an inquiry below or contact us directly. Our engineering team typically responds within one business day.
+            Submit an inquiry below or contact us directly to discuss your equipment configuration and coating requirements.
           </p>
         </div>
       </div>

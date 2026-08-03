@@ -117,7 +117,7 @@ export const products: Product[] = [
     images: [IMG.MS002, IMG.MSR007],
     tagline: 'High-uniformity sputtering for optical and functional films',
     summary:
-      'The HN-MS-002 industrial magnetron sputtering system delivers exceptional thin-film uniformity and composition control, making it the preferred platform for optical coatings, functional films, and precision device fabrication. Planar and cylindrical magnetron configurations are available to suit target geometry and process requirements.',
+      'The HN-MS-002 industrial magnetron sputtering system is designed for thin-film uniformity and composition control in optical coatings, functional films, and precision device fabrication. Planar and cylindrical magnetron configurations are available to suit target geometry and process requirements.',
     principle:
       'Magnetron sputtering confines a plasma near the target surface using crossed electric and magnetic fields, enabling high-rate sputtering of a wide range of metallic, ceramic, and compound target materials. DC, RF, or pulsed DC power may be applied depending on target conductivity. Reactive sputtering in nitrogen or oxygen atmospheres allows deposition of nitride, oxide, and oxynitride films.',
     advantages: [
@@ -249,7 +249,7 @@ export const products: Product[] = [
     images: [IMG.MSEB005, IMG.EB004, IMG.MS002],
     tagline: 'Unified sputtering and evaporation for advanced multilayer architectures',
     summary:
-      'The HN-MS-EB-005 combines magnetron sputtering and electron beam evaporation within a single integrated vacuum system, offering unparalleled flexibility for advanced multilayer coating development. The platform is particularly suited to complex optical filter stacks, functional semiconductor films, and hybrid coating architectures that require both the directional purity of evaporation and the reactive compositional control of sputtering.',
+      'The HN-MS-EB-005 combines magnetron sputtering and electron beam evaporation within a single integrated vacuum system for advanced multilayer coating development. The platform supports optical filter stacks, functional semiconductor films, and hybrid coating architectures that use evaporation and reactive sputtering in one process environment.',
     principle:
       'Magnetron sputtering and e-beam evaporation sources are mounted in a shared high-vacuum chamber, with deposition sequences managed by an integrated PLC controller. Each source technology contributes distinct capabilities: magnetron sputtering provides reactive compound deposition with excellent lateral uniformity, while electron beam evaporation delivers refractory and high-purity material deposition with precise rate control via QCM monitoring.',
     advantages: [
@@ -463,7 +463,7 @@ export const products: Product[] = [
     images: [IMG.MSEBR010, IMG.MSR007, IMG.EBR009],
     tagline: 'Advanced research platform integrating sputtering and evaporation',
     summary:
-      'The HN-MS-EB-R-010 is HUANING ZHIKE\'s most versatile laboratory platform, integrating magnetron sputtering and electron beam evaporation in a single high-vacuum research chamber. Designed for leading universities, national laboratories, and semiconductor research centers, the system supports the broadest range of thin-film research activities — from optical multilayer development to semiconductor device heterostructures.',
+      'The HN-MS-EB-R-010 integrates magnetron sputtering and electron beam evaporation in a single high-vacuum research chamber. Designed for university laboratories, materials research institutes, and semiconductor research centers, the system supports thin-film research activities ranging from optical multilayer development to semiconductor device heterostructures.',
     principle:
       'A shared high-vacuum environment with independent magnetron sputtering and e-beam evaporation sources allows researchers to leverage the strengths of each technique within a single experiment. Sputtering excels at reactive deposition of stoichiometrically controlled compounds; evaporation delivers low-defect, high-purity films of refractory materials and compound semiconductors. Sequential and co-deposition modes are supported.',
     advantages: [
