@@ -19,10 +19,10 @@ export interface Solution {
 }
 
 const IMG = {
-  MS002:   'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/api-attachments/5TbgUxh1IgKXhMxYkuANk-8rvIJhCZWXDnamL5VbWlb5j73DWs1U.png',
-  EB004:   'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/api-attachments/02b97i8SFXHFCYt2e7uUo-9FNY9SD1PetmILfEkaMCHjpwri4EIU.jpg',
-  MA001:   'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/api-attachments/L6ejaE7QeEqbXNvrWitNX-OMLmTfMWkAzxilvxGljgB12JiQibsK.png',
-  MSR007:  'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/api-attachments/rSAgN2qxNFIQ9NB93uSHO-5cVa1ak9FMvEt90tBwru8a2xqt2sgy.png',
+  MS002:   'https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/c0542148-cfbe-4c44-b7f2-7b36465032a2/products/hn-ms-002/01.png',
+  EB004:   'https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/c0542148-cfbe-4c44-b7f2-7b36465032a2/products/hn-eb-004/01.jpg',
+  MA001:   'https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/c0542148-cfbe-4c44-b7f2-7b36465032a2/products/hn-ma-001/01.png',
+  MSR007:  'https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/c0542148-cfbe-4c44-b7f2-7b36465032a2/products/hn-ms-r-007/01.png',
 } as const
 
 export const solutions: Solution[] = [

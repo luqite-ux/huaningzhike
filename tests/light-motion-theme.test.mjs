@@ -31,6 +31,11 @@ test('brand assets use the transparent customer logo and HN favicon', () => {
   assert.ok(fs.existsSync(path.join(root, 'public/images/logo-transparent.png')))
 })
 
+test('solution cards use clean customer R2 images without dark wash overlays', () => {
+  assert.match(homeSections, /pub-c7a22068052144a5805830c30d280128\.r2\.dev/)
+  assert.doesNotMatch(homeSections, /from-\[#0B1E3D\]\/80/)
+})
+
 test('homepage exposes rich motion with an accessible reduced-motion fallback', () => {
   const motionLayers = hero.match(/animate-(?:float|orbit|drift|light|gradient|pulse)/g) ?? []
   assert.ok(motionLayers.length >= 6, `expected at least 6 motion layers, found ${motionLayers.length}`)

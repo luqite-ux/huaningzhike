@@ -329,7 +329,7 @@ const SOLUTIONS = [
     title: 'Optical Coatings',
     desc: 'AR, HR, bandpass, beamsplitter, and specialty filter coatings across UV, visible, and infrared spectra. E-beam evaporation and magnetron sputtering platforms with optical monitoring.',
     tags: ['Anti-Reflection', 'High-Reflection Mirrors', 'Bandpass Filters', 'ITO/TCO'],
-    image: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/api-attachments/02b97i8SFXHFCYt2e7uUo-9FNY9SD1PetmILfEkaMCHjpwri4EIU.jpg',
+    image: 'https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/c0542148-cfbe-4c44-b7f2-7b36465032a2/products/hn-eb-004/01.jpg',
   },
   {
     slug: 'dlc-wear-coatings',
@@ -337,7 +337,7 @@ const SOLUTIONS = [
     title: 'DLC & Wear-Resistant Coatings',
     desc: 'TiN, TiAlN, CrN, AlTiN, and DLC coatings for cutting tools, forming dies, medical devices, and tribological components. High-throughput arc and composite platforms.',
     tags: ['Cutting Tools', 'DLC Films', 'Die & Mold', 'Automotive'],
-    image: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/api-attachments/L6ejaE7QeEqbXNvrWitNX-OMLmTfMWkAzxilvxGljgB12JiQibsK.png',
+    image: 'https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/c0542148-cfbe-4c44-b7f2-7b36465032a2/products/hn-ma-001/01.png',
   },
   {
     slug: 'semiconductor-thin-films',
@@ -345,7 +345,7 @@ const SOLUTIONS = [
     title: 'Semiconductor Thin Films',
     desc: 'Metal contacts, barrier layers, transparent conductors, piezoelectric, and high-k dielectric films for device fabrication, MEMS, and power electronics research.',
     tags: ['Metal Contacts', 'TCO Films', 'Piezoelectric', 'Gate Oxides'],
-    image: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/api-attachments/5TbgUxh1IgKXhMxYkuANk-8rvIJhCZWXDnamL5VbWlb5j73DWs1U.png',
+    image: 'https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/c0542148-cfbe-4c44-b7f2-7b36465032a2/products/hn-ms-002/01.png',
   },
   {
     slug: 'research-platforms',
@@ -353,7 +353,7 @@ const SOLUTIONS = [
     title: 'Research Platforms',
     desc: 'Fully configurable laboratory PVD systems for universities, research institutes, and advanced materials R&D. CF-flange compatible chambers with analytical instrument integration.',
     tags: ['Materials Science', 'Process Development', 'University Labs', 'Scale-up Studies'],
-    image: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/api-attachments/rSAgN2qxNFIQ9NB93uSHO-5cVa1ak9FMvEt90tBwru8a2xqt2sgy.png',
+    image: 'https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/c0542148-cfbe-4c44-b7f2-7b36465032a2/products/hn-ms-r-007/01.png',
   },
 ]
 
@@ -382,16 +382,15 @@ export function SolutionPathways() {
                   className="group glass-card rounded-xl overflow-hidden border border-[rgba(200,168,75,0.1)] hover:border-[rgba(200,168,75,0.3)] transition-all duration-300 flex flex-col focus-visible:outline-2 focus-visible:outline-[var(--gold)]"
                   aria-label={`View ${sol.title} solutions`}
                 >
-                  <div className="relative h-40 bg-gradient-to-br from-white to-[#eaf3ff] overflow-hidden">
+                  <div className="relative h-48 bg-white overflow-hidden border-b border-[#e5edf7]">
                     <Image
                       src={sol.image}
                       alt={sol.title}
                       fill
                       sizes="(max-width: 640px) 100vw, 25vw"
-                      className="object-contain p-4 transition-transform duration-500 group-hover:scale-105"
+                      className="object-contain p-5 transition-transform duration-500 group-hover:scale-[1.04]"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-[#0B1E3D]/80 to-transparent" />
-                    <div className="absolute bottom-3 left-3">
+                    <div className="absolute bottom-3 left-3 rounded-lg bg-white/95 p-2 shadow-sm ring-1 ring-[#dbe6f3]">
                       <Icon size={20} className="text-[var(--gold)]" aria-hidden="true" />
                     </div>
                   </div>
