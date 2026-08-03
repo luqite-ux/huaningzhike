@@ -102,9 +102,10 @@ export function HeroSection() {
       className="relative min-h-screen flex flex-col justify-center overflow-hidden"
     >
       {/* Layered gradient background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-[#030B16] via-[#070F1F] to-[#0A1530]" aria-hidden="true" />
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_60%_at_60%_40%,rgba(27,85,196,0.12)_0%,transparent_70%)]" aria-hidden="true" />
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_50%_40%_at_20%_70%,rgba(200,168,75,0.06)_0%,transparent_60%)]" aria-hidden="true" />
+      <div className="absolute inset-0 bg-gradient-to-br from-[#fffdf7] via-[#f4f8ff] to-[#e8f2ff] animate-gradient-pan" aria-hidden="true" />
+      <div className="absolute -top-32 -right-24 h-[34rem] w-[34rem] rounded-full bg-[rgba(58,122,245,0.16)] blur-3xl animate-drift-orb" aria-hidden="true" />
+      <div className="absolute -bottom-32 left-0 h-[28rem] w-[28rem] rounded-full bg-[rgba(230,204,122,0.24)] blur-3xl animate-drift-orb [animation-delay:-3s]" aria-hidden="true" />
+      <div className="absolute top-1/4 left-1/3 h-28 w-28 rounded-full bg-white/80 blur-2xl animate-pulse-gold" aria-hidden="true" />
 
       {/* Tech grid */}
       <div className="absolute inset-0 tech-grid-bg opacity-60" aria-hidden="true" />
@@ -121,8 +122,8 @@ export function HeroSection() {
         className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] md:w-[900px] md:h-[900px] pointer-events-none"
         aria-hidden="true"
       >
-        <div className="absolute inset-0 rounded-full border border-[rgba(200,168,75,0.06)] animate-orbit-slow" />
-        <div className="absolute inset-[60px] rounded-full border border-[rgba(27,85,196,0.08)] animate-orbit-mid" />
+        <div className="absolute inset-0 rounded-full border border-[rgba(200,168,75,0.22)] animate-orbit-slow" />
+        <div className="absolute inset-[60px] rounded-full border border-[rgba(27,85,196,0.17)] animate-orbit-mid" />
         <div className="absolute inset-[140px] rounded-full border border-[rgba(200,168,75,0.04)]" />
       </div>
 
@@ -195,7 +196,7 @@ export function HeroSection() {
 
             {/* Glass frame */}
             <div className="relative glass-card rounded-2xl p-4 gold-border-glow">
-              <div className="relative aspect-[4/3] rounded-xl overflow-hidden bg-gradient-to-br from-[#0A1830] to-[#050E1A]">
+              <div className="relative aspect-[4/3] rounded-xl overflow-hidden bg-gradient-to-br from-white to-[#eaf3ff]">
                 <Image
                   src={FLAGSHIP_IMAGE}
                   alt="HUANING ZHIKE industrial PVD coating system"

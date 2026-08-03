@@ -22,7 +22,7 @@ const ICONS: Record<string, React.ComponentType<{ size?: number; className?: str
 
 export default function SolutionsPage() {
   return (
-    <div className="min-h-screen bg-[#050E1A]">
+    <div className="min-h-screen bg-transparent">
       {/* Page header */}
       <div className="relative overflow-hidden pt-28 pb-14">
         <div className="absolute inset-0 bg-gradient-to-b from-[#030B16] via-[#070F1F] to-[#050E1A]" aria-hidden="true" />

@@ -63,7 +63,7 @@ export function SiteHeader() {
       <header
         className={`fixed top-0 inset-x-0 z-50 transition-all duration-300 ${
           scrolled
-            ? 'bg-[#050E1A]/95 backdrop-blur-md border-b border-[rgba(200,168,75,0.15)] shadow-[0_4px_32px_rgba(0,0,0,0.4)]'
+            ? 'bg-transparent/95 backdrop-blur-md border-b border-[rgba(200,168,75,0.15)] shadow-[0_4px_32px_rgba(0,0,0,0.4)]'
             : 'bg-gradient-to-b from-[#050E1A]/80 to-transparent'
         }`}
       >
@@ -183,7 +183,7 @@ export function SiteHeader() {
       >
         {/* Backdrop */}
         <div
-          className="absolute inset-0 bg-[#050E1A]/80 backdrop-blur-sm"
+          className="absolute inset-0 bg-transparent/80 backdrop-blur-sm"
           onClick={() => setMobileOpen(false)}
         />
 

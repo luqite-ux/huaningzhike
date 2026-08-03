@@ -20,7 +20,7 @@ const QUICK_LINKS = [
 
 export default function NotFound() {
   return (
-    <div className="min-h-screen bg-[#050E1A] flex flex-col">
+    <div className="min-h-screen bg-transparent flex flex-col">
       {/* ── Background artwork ── */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none" aria-hidden="true">
         <div className="absolute inset-0 tech-grid-bg opacity-30" />

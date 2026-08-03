@@ -511,7 +511,7 @@ const PROCESS_STEPS = [
 export function CustomProjectProcess() {
   return (
     <section aria-labelledby="process-heading" className="relative py-20 md:py-28 overflow-hidden">
-      <div className="absolute inset-0 bg-[#050E1A]" aria-hidden="true" />
+      <div className="absolute inset-0 bg-transparent" aria-hidden="true" />
 
       <div className="relative max-w-[1400px] mx-auto px-4 md:px-8">
         <RevealSection>

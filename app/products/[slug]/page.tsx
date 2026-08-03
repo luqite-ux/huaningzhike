@@ -70,7 +70,7 @@ export default async function ProductDetailPage({
   const related = product.relatedSlugs.map((relatedSlug) => allProducts.find((item) => item.slug === relatedSlug)).filter(Boolean) as typeof allProducts
 
   return (
-    <div className="min-h-screen bg-[#050E1A]">
+    <div className="min-h-screen bg-transparent">
       <JsonLd data={[
         {
           '@context': 'https://schema.org', '@type': 'Product',

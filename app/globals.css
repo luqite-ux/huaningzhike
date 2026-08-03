@@ -9,34 +9,34 @@
   --gold:            #C8A84B;
   --gold-light:      #E6CC7A;
   --gold-dark:       #8B6E1E;
-  --navy:            #050E1A;
-  --navy-mid:        #0B1E3D;
-  --navy-light:      #132848;
+  --navy:            #102A4C;
+  --navy-mid:        #EAF2FC;
+  --navy-light:      #DCE9F8;
   --blue:            #1B55C4;
   --blue-light:      #3A7AF5;
-  --steel:           #7A95B8;
-  --steel-light:     #A8BDD4;
+  --steel:           #526B86;
+  --steel-light:     #36506D;
 
   /* Semantic tokens */
-  --background:             #050E1A;
-  --foreground:             #EEF3FA;
-  --card:                   #0B1E3D;
-  --card-foreground:        #EEF3FA;
-  --popover:                #0B1E3D;
-  --popover-foreground:     #EEF3FA;
+  --background:             #F7FAFE;
+  --foreground:             #102A4C;
+  --card:                   #FFFFFF;
+  --card-foreground:        #102A4C;
+  --popover:                #FFFFFF;
+  --popover-foreground:     #102A4C;
   --primary:                #C8A84B;
   --primary-foreground:     #050E1A;
   --secondary:              #1B55C4;
-  --secondary-foreground:   #EEF3FA;
-  --muted:                  #132848;
-  --muted-foreground:       #7A95B8;
+  --secondary-foreground:   #FFFFFF;
+  --muted:                  #EAF2FC;
+  --muted-foreground:       #526B86;
   --accent:                 #1B55C4;
-  --accent-foreground:      #EEF3FA;
+  --accent-foreground:      #FFFFFF;
   --destructive:            #DC2626;
   --destructive-foreground: #FFFFFF;
   --border:                 rgba(200, 168, 75, 0.18);
   --border-blue:            rgba(27, 85, 196, 0.25);
-  --input:                  #0F2445;
+  --input:                  #FFFFFF;
   --input-border:           rgba(200, 168, 75, 0.3);
   --ring:                   #C8A84B;
   --success:                #16A34A;
@@ -98,7 +98,11 @@
   }
   body {
     @apply bg-background text-foreground font-sans;
-    background: var(--navy);
+    background:
+      radial-gradient(circle at 12% 8%, rgba(230, 204, 122, .22), transparent 30%),
+      radial-gradient(circle at 88% 18%, rgba(58, 122, 245, .17), transparent 34%),
+      linear-gradient(145deg, #fffdf8 0%, #f4f8ff 48%, #eef5ff 100%);
+    background-attachment: fixed;
   }
   h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-heading);
@@ -148,6 +152,11 @@
   50%  { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
 }
+@keyframes drift-orb {
+  0%, 100% { transform: translate3d(0, 0, 0) scale(1); }
+  33% { transform: translate3d(36px, -24px, 0) scale(1.08); }
+  66% { transform: translate3d(-28px, 20px, 0) scale(.94); }
+}
 
 /* ─── Utility classes ────────────────────────────────────────────────────────── */
 .animate-fade-in-up {
@@ -178,6 +187,7 @@
   background-size: 200% 200%;
   animation: gradient-pan 6s ease infinite;
 }
+.animate-drift-orb { animation: drift-orb 10s ease-in-out infinite; }
 
 @media (prefers-reduced-motion: reduce) {
   .animate-fade-in-up,
@@ -192,18 +202,20 @@
     animation: none !important;
     transition: none !important;
   }
+  .animate-drift-orb { animation: none !important; }
 }
 
 /* ─── Custom Components ─────────────────────────────────────────────────────── */
 .glass-card {
-  background: rgba(11, 30, 61, 0.6);
+  background: rgba(255, 255, 255, 0.76);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(200, 168, 75, 0.15);
+  border: 1px solid rgba(16, 42, 76, 0.10);
+  box-shadow: 0 18px 50px rgba(27, 85, 196, 0.08);
 }
 
 .glass-card-blue {
-  background: rgba(27, 85, 196, 0.08);
+  background: rgba(224, 237, 255, 0.78);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border: 1px solid rgba(27, 85, 196, 0.2);
@@ -218,7 +230,7 @@
 
 .gold-border-glow {
   border: 1px solid rgba(200, 168, 75, 0.4);
-  box-shadow: 0 0 20px rgba(200, 168, 75, 0.08), inset 0 0 20px rgba(200, 168, 75, 0.03);
+  box-shadow: 0 18px 55px rgba(27, 85, 196, 0.10), inset 0 0 24px rgba(230, 204, 122, 0.12);
 }
 
 .btn-gold {
@@ -257,8 +269,8 @@
 
 .tech-grid-bg {
   background-image:
-    linear-gradient(rgba(200, 168, 75, 0.04) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(200, 168, 75, 0.04) 1px, transparent 1px);
+    linear-gradient(rgba(27, 85, 196, 0.055) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(27, 85, 196, 0.055) 1px, transparent 1px);
   background-size: 40px 40px;
 }
 
@@ -301,7 +313,7 @@
   width: 6px;
 }
 ::-webkit-scrollbar-track {
-  background: var(--navy);
+  background: #edf4fc;
 }
 ::-webkit-scrollbar-thumb {
   background: rgba(200, 168, 75, 0.3);

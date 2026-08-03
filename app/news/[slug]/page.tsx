@@ -85,7 +85,7 @@ export default async function NewsArticlePage({ params }: Props) {
   })
 
   return (
-    <div className="min-h-screen bg-[#050E1A]">
+    <div className="min-h-screen bg-transparent">
       <JsonLd data={[
         {
           '@context': 'https://schema.org', '@type': 'NewsArticle',
