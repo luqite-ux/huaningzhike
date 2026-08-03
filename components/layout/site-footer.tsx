@@ -42,10 +42,10 @@ export function SiteFooter() {
       <div className="relative bg-gradient-to-r from-[#0A1830] via-[#0F2245] to-[#0A1830] py-12">
         <div className="max-w-[1400px] mx-auto px-4 md:px-8 flex flex-col md:flex-row items-center justify-between gap-6">
           <div>
-            <h2 className="font-heading text-2xl md:text-3xl text-[var(--foreground)] tracking-wide">
+            <h2 className="font-heading text-2xl md:text-3xl text-white tracking-wide">
               Ready to discuss your coating process?
             </h2>
-            <p className="mt-1.5 text-[var(--steel-light)] text-sm leading-relaxed">
+            <p className="mt-1.5 text-[#C8D5EA] text-sm leading-relaxed">
               Our engineers are available to review your application requirements and recommend the right system configuration.
             </p>
           </div>

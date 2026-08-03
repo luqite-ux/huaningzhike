@@ -11,6 +11,8 @@ const layout = fs.readFileSync(path.join(root, 'app/layout.tsx'), 'utf8')
 const header = fs.readFileSync(path.join(root, 'components/layout/site-header.tsx'), 'utf8')
 const solutions = fs.readFileSync(path.join(root, 'lib/solutions.ts'), 'utf8')
 const products = fs.readFileSync(path.join(root, 'lib/products.ts'), 'utf8')
+const productCatalog = fs.readFileSync(path.join(root, 'components/products/product-catalog.tsx'), 'utf8')
+const footer = fs.readFileSync(path.join(root, 'components/layout/site-footer.tsx'), 'utf8')
 const pages = fs.readdirSync(path.join(root, 'app'), { recursive: true })
   .filter((file) => file.endsWith('.tsx'))
   .map((file) => fs.readFileSync(path.join(root, 'app', file), 'utf8'))
@@ -51,4 +53,16 @@ test('homepage exposes rich motion with an accessible reduced-motion fallback', 
   const motionLayers = hero.match(/animate-(?:float|orbit|drift|light|gradient|pulse)/g) ?? []
   assert.ok(motionLayers.length >= 6, `expected at least 6 motion layers, found ${motionLayers.length}`)
   assert.match(css, /prefers-reduced-motion:\s*reduce/)
+})
+
+test('catalog uses compact product-line tabs instead of search and advanced filters', () => {
+  assert.doesNotMatch(productCatalog, /Search by name|aria-label="Search equipment"|>\s*Filters\s*</)
+  assert.match(productCatalog, /All Systems/)
+  assert.match(productCatalog, /Industrial/)
+  assert.match(productCatalog, /Laboratory/)
+})
+
+test('dark footer CTA explicitly resets its foreground colors', () => {
+  assert.match(footer, /<h2 className="[^"]*text-white[^"]*">[\s\S]{0,80}Ready to discuss your coating process\?/)
+  assert.match(footer, /<p className="[^"]*text-\[#C8D5EA\][^"]*">[\s\S]{0,120}Our engineers are available/)
 })

@@ -3,245 +3,63 @@
 import { useState, useMemo } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
-import { Search, Filter, X, ArrowRight } from 'lucide-react'
-import {
-  type Product,
-  type ProductCategory,
-  type DepositionProcess,
-  type ApplicationArea,
-} from '@/lib/products'
+import { ArrowRight } from 'lucide-react'
+import { type Product, type ProductCategory } from '@/lib/products'
 
-const CATEGORIES: ProductCategory[] = [
-  'Industrial PVD Coating Equipment',
-  'Lab R&D PVD Coating Equipment',
+const PRODUCT_LINES: Array<{ label: string; value: ProductCategory | '' }> = [
+  { label: 'All Systems', value: '' },
+  { label: 'Industrial', value: 'Industrial PVD Coating Equipment' },
+  { label: 'Laboratory', value: 'Lab R&D PVD Coating Equipment' },
 ]
-
-const DEPOSITION_PROCESSES: DepositionProcess[] = [
-  'Multi-arc Ion Plating',
-  'Magnetron Sputtering',
-  'Multi-arc & Magnetron Sputtering',
-  'Electron Beam Evaporation',
-  'Magnetron & Electron Beam',
-]
-
-const APPLICATIONS: ApplicationArea[] = [
-  'Hard Decorative Coatings',
-  'Wear-resistant & DLC Coatings',
-  'Optical Thin Films',
-  'Semiconductor Thin Films',
-  'Research & Development',
-  'Tool & Die Coatings',
-]
-
-interface FiltersState {
-  search: string
-  category: ProductCategory | ''
-  process: DepositionProcess | ''
-  application: ApplicationArea | ''
-}
 
 export function ProductCatalog({ defaultLine, products }: { defaultLine?: string; products: Product[] }) {
-  const [filters, setFilters] = useState<FiltersState>({
-    search: '',
-    category: defaultLine === 'industrial'
+  const [category, setCategory] = useState<ProductCategory | ''>(
+    defaultLine === 'industrial'
       ? 'Industrial PVD Coating Equipment'
       : defaultLine === 'lab'
       ? 'Lab R&D PVD Coating Equipment'
       : '',
-    process: '',
-    application: '',
-  })
-  const [filtersOpen, setFiltersOpen] = useState(false)
+  )
 
   const filtered = useMemo(() => {
-    return products.filter((p) => {
-      if (filters.search) {
-        const q = filters.search.toLowerCase()
-        if (
-          !p.name.toLowerCase().includes(q) &&
-          !p.model.toLowerCase().includes(q) &&
-          !p.tagline.toLowerCase().includes(q) &&
-          !p.depositionProcess.toLowerCase().includes(q)
-        ) return false
-      }
-      if (filters.category && p.category !== filters.category) return false
-      if (filters.process && p.depositionProcess !== filters.process) return false
-      if (filters.application && !p.applications.includes(filters.application as ApplicationArea)) return false
-      return true
-    })
-  }, [filters])
-
-  const activeFilterCount = [filters.category, filters.process, filters.application].filter(Boolean).length
-
-  const clearFilters = () =>
-    setFilters({ search: '', category: '', process: '', application: '' })
+    return category ? products.filter((product) => product.category === category) : products
+  }, [category, products])
 
   return (
     <div className="max-w-[1400px] mx-auto px-4 md:px-8 py-12">
-      {/* Search and filter bar */}
-      <div className="flex flex-col sm:flex-row gap-3 mb-8">
-        <div className="relative flex-1">
-          <Search size={16} className="absolute left-3.5 top-1/2 -translate-y-1/2 text-[var(--steel)]" aria-hidden="true" />
-          <input
-            type="search"
-            value={filters.search}
-            onChange={(e) => setFilters((f) => ({ ...f, search: e.target.value }))}
-            placeholder="Search by name, model, or process…"
-            aria-label="Search equipment"
-            className="form-input pl-10 pr-4 py-2.5 w-full"
-          />
+      <div className="mb-8 flex flex-wrap items-center justify-between gap-4">
+        <div className="inline-flex flex-wrap gap-2" role="group" aria-label="Product line">
+          {PRODUCT_LINES.map((line) => {
+            const active = category === line.value
+            return (
+              <button
+                key={line.label}
+                type="button"
+                onClick={() => setCategory(line.value)}
+                aria-pressed={active}
+                className={`rounded-full border px-5 py-2.5 text-sm font-heading font-semibold tracking-wide transition-all focus-visible:outline-2 focus-visible:outline-[var(--gold)] ${
+                  active
+                    ? 'border-[var(--gold)] bg-[var(--gold)] text-[#08152A] shadow-[0_6px_20px_rgba(200,168,75,0.22)]'
+                    : 'border-[#B9C9DF] bg-white text-[#27466D] hover:border-[var(--gold)] hover:text-[#0B1E3D]'
+                }`}
+              >
+                {line.label}
+              </button>
+            )
+          })}
         </div>
 
-        <button
-          type="button"
-          onClick={() => setFiltersOpen(!filtersOpen)}
-          aria-expanded={filtersOpen}
-          aria-controls="filter-panel"
-          className="btn-outline-gold flex items-center gap-2 px-4 py-2.5 rounded text-sm whitespace-nowrap focus-visible:outline-2 focus-visible:outline-[var(--gold)]"
-        >
-          <Filter size={15} aria-hidden="true" />
-          Filters
-          {activeFilterCount > 0 && (
-            <span className="inline-flex items-center justify-center w-5 h-5 rounded-full bg-[var(--gold)] text-[var(--navy)] text-[10px] font-bold">
-              {activeFilterCount}
-            </span>
-          )}
-        </button>
-
-        {(activeFilterCount > 0 || filters.search) && (
-          <button
-            type="button"
-            onClick={clearFilters}
-            className="flex items-center gap-1.5 px-3 py-2.5 text-sm text-[var(--steel)] hover:text-[var(--foreground)] transition-colors focus-visible:outline-2 focus-visible:outline-[var(--gold)]"
-          >
-            <X size={14} aria-hidden="true" /> Clear
-          </button>
-        )}
-      </div>
-
-      {/* Filter panel */}
-      {filtersOpen && (
-        <div
-          id="filter-panel"
-          className="glass-card rounded-xl p-5 mb-8 grid sm:grid-cols-3 gap-5 border border-[rgba(200,168,75,0.15)] animate-fade-in"
-          role="group"
-          aria-label="Filter equipment"
-        >
-          {/* Category */}
-          <div>
-            <label className="block text-xs font-medium text-[var(--steel-light)] uppercase tracking-wide mb-2">
-              Product Line
-            </label>
-            <div className="space-y-1.5">
-              {CATEGORIES.map((cat) => (
-                <label key={cat} className="flex items-center gap-2.5 cursor-pointer group">
-                  <input
-                    type="radio"
-                    name="category"
-                    value={cat}
-                    checked={filters.category === cat}
-                    onChange={() =>
-                      setFilters((f) => ({
-                        ...f,
-                        category: f.category === cat ? '' : cat,
-                      }))
-                    }
-                    className="accent-[var(--gold)]"
-                  />
-                  <span className="text-sm text-[var(--steel-light)] group-hover:text-[var(--foreground)] transition-colors">
-                    {cat === 'Industrial PVD Coating Equipment' ? 'Industrial' : 'Lab R&D'}
-                  </span>
-                </label>
-              ))}
-            </div>
-          </div>
-
-          {/* Process */}
-          <div>
-            <label className="block text-xs font-medium text-[var(--steel-light)] uppercase tracking-wide mb-2">
-              Deposition Process
-            </label>
-            <div className="space-y-1.5">
-              {DEPOSITION_PROCESSES.map((proc) => (
-                <label key={proc} className="flex items-center gap-2.5 cursor-pointer group">
-                  <input
-                    type="radio"
-                    name="process"
-                    value={proc}
-                    checked={filters.process === proc}
-                    onChange={() =>
-                      setFilters((f) => ({
-                        ...f,
-                        process: f.process === proc ? '' : (proc as DepositionProcess),
-                      }))
-                    }
-                    className="accent-[var(--gold)]"
-                  />
-                  <span className="text-sm text-[var(--steel-light)] group-hover:text-[var(--foreground)] transition-colors">
-                    {proc}
-                  </span>
-                </label>
-              ))}
-            </div>
-          </div>
-
-          {/* Application */}
-          <div>
-            <label className="block text-xs font-medium text-[var(--steel-light)] uppercase tracking-wide mb-2">
-              Application
-            </label>
-            <div className="space-y-1.5">
-              {APPLICATIONS.map((app) => (
-                <label key={app} className="flex items-center gap-2.5 cursor-pointer group">
-                  <input
-                    type="radio"
-                    name="application"
-                    value={app}
-                    checked={filters.application === app}
-                    onChange={() =>
-                      setFilters((f) => ({
-                        ...f,
-                        application: f.application === app ? '' : (app as ApplicationArea),
-                      }))
-                    }
-                    className="accent-[var(--gold)]"
-                  />
-                  <span className="text-sm text-[var(--steel-light)] group-hover:text-[var(--foreground)] transition-colors">
-                    {app}
-                  </span>
-                </label>
-              ))}
-            </div>
-          </div>
-        </div>
-      )}
-
-      {/* Results count */}
-      <div className="flex items-center justify-between mb-6">
-        <p className="text-[var(--steel)] text-sm">
-          Showing <span className="text-[var(--foreground)] font-semibold">{filtered.length}</span> of {products.length} systems
+        <p className="text-[#496789] text-sm">
+          Showing <span className="text-[#0B1E3D] font-semibold">{filtered.length}</span> of {products.length} systems
         </p>
       </div>
 
       {/* Grid */}
-      {filtered.length === 0 ? (
-        <div className="glass-card rounded-xl p-12 text-center">
-          <div className="text-[var(--steel)] mb-3">No equipment matched your filters.</div>
-          <button
-            type="button"
-            onClick={clearFilters}
-            className="btn-outline-gold px-5 py-2 rounded text-sm"
-          >
-            Clear Filters
-          </button>
-        </div>
-      ) : (
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
-          {filtered.map((product) => (
-            <ProductCard key={product.slug} product={product} />
-          ))}
-        </div>
-      )}
+      <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
+        {filtered.map((product) => (
+          <ProductCard key={product.slug} product={product} />
+        ))}
+      </div>
     </div>
   )
 }
