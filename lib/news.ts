@@ -32,31 +32,31 @@ export interface NewsArticle {
  *  Replace with: `const { data } = await supabase.from('articles').select('*').order('published_at', { ascending: false })`
  */
 import { createSupabaseClient, tenantId } from '@/lib/supabase'
+import { DEFAULT_LOCALE, localizedText } from '@/lib/i18n'
 
 type ArticleRow = Record<string, unknown>
-const localized = (value: unknown) => value && typeof value === 'object' ? String((value as Record<string, unknown>).en ?? '') : ''
-function mapArticle(row: ArticleRow): NewsArticle {
+function mapArticle(row: ArticleRow, locale = DEFAULT_LOCALE): NewsArticle {
   return {
-    slug: String(row.slug ?? ''), title: localized(row.title_i18n), summary: localized(row.excerpt_i18n),
-    body: localized(row.content_i18n), publishedAt: String(row.published_at ?? row.created_at ?? ''),
+    slug: String(row.slug ?? ''), title: localizedText(row.title_i18n, locale), summary: localizedText(row.excerpt_i18n, locale),
+    body: localizedText(row.content_i18n, locale), publishedAt: String(row.published_at ?? row.created_at ?? ''),
     category: String(row.category ?? 'Company News'), coverImage: typeof row.featured_image === 'string' ? row.featured_image : undefined,
-    coverImageAlt: localized(row.title_i18n), metaDescription: localized(row.excerpt_i18n),
+    coverImageAlt: localizedText(row.title_i18n, locale), metaDescription: localizedText(row.excerpt_i18n, locale),
     relatedProducts: Array.isArray((row.extra_data as Record<string, unknown> | null)?.relatedProducts) ? (row.extra_data as { relatedProducts: string[] }).relatedProducts : [],
   }
 }
 
-export async function getAllArticles(): Promise<NewsArticle[]> {
+export async function getAllArticles(locale = DEFAULT_LOCALE): Promise<NewsArticle[]> {
   const supabase = createSupabaseClient()
   if (!supabase) return []
   const { data, error } = await supabase.from('articles').select('*').eq('tenant_id', tenantId).eq('is_published', true).order('published_at', { ascending: false })
-  return error ? [] : (data ?? []).map(mapArticle)
+  return error ? [] : (data ?? []).map((row) => mapArticle(row, locale))
 }
 
 /** Single article by slug.
  *  Replace with: `const { data } = await supabase.from('articles').select('*').eq('slug', slug).single()`
  */
-export async function getArticleBySlug(slug: string): Promise<NewsArticle | null> {
-  return (await getAllArticles()).find((article) => article.slug === slug) ?? null
+export async function getArticleBySlug(slug: string, locale = DEFAULT_LOCALE): Promise<NewsArticle | null> {
+  return (await getAllArticles(locale)).find((article) => article.slug === slug) ?? null
 }
 
 /** All slugs for generateStaticParams.
