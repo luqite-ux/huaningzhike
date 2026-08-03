@@ -44,8 +44,8 @@ export interface Product {
 
 /* ─── Image URLs ──────────────────────────────────────────────────────────────── */
 const IMG = {
-  MA001:    'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/api-attachments/L6ejaE7QeEqbXNvrWitNX-OMLmTfMWkAzxilvxGljgB12JiQibsK.png',
-  MS002:    'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/api-attachments/5TbgUxh1IgKXhMxYkuANk-8rvIJhCZWXDnamL5VbWlb5j73DWs1U.png',
+  MA001:    'https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/c0542148-cfbe-4c44-b7f2-7b36465032a2/products/hn-ma-001/02.png',
+  MS002:    'https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/c0542148-cfbe-4c44-b7f2-7b36465032a2/products/hn-ms-002/01.png',
   MAMS003:  'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/api-attachments/As2wX5o00gI89Tbyu2N8p-epiZDHJWaVZB5Vj6qKZH03qvxl8p4L.png',
   EB004:    'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/api-attachments/02b97i8SFXHFCYt2e7uUo-9FNY9SD1PetmILfEkaMCHjpwri4EIU.jpg',
   MSEB005:  'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/api-attachments/wsKWupUDPtfRtscrWX29W-rodxdRoCKrSCHPQYtnb20FaBoMDoYy.png',

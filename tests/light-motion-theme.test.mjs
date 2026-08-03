@@ -10,6 +10,7 @@ const homeSections = fs.readFileSync(path.join(root, 'components/home/home-secti
 const layout = fs.readFileSync(path.join(root, 'app/layout.tsx'), 'utf8')
 const header = fs.readFileSync(path.join(root, 'components/layout/site-header.tsx'), 'utf8')
 const solutions = fs.readFileSync(path.join(root, 'lib/solutions.ts'), 'utf8')
+const products = fs.readFileSync(path.join(root, 'lib/products.ts'), 'utf8')
 const pages = fs.readdirSync(path.join(root, 'app'), { recursive: true })
   .filter((file) => file.endsWith('.tsx'))
   .map((file) => fs.readFileSync(path.join(root, 'app', file), 'utf8'))
@@ -38,9 +39,12 @@ test('solution cards use clean customer R2 images without dark wash overlays', (
 })
 
 test('multi-arc and magnetron products use different customer-supplied views', () => {
-  assert.match(homeSections, /products\/hn-ma-001\/01\.png/)
-  assert.match(homeSections, /products\/hn-ms-002\/02\.png/)
-  assert.match(solutions, /MS002:\s+'[^']+\/hn-ms-002\/02\.png'/)
+  assert.match(homeSections, /products\/hn-ma-001\/02\.png/)
+  assert.match(homeSections, /products\/hn-ms-002\/01\.png/)
+  assert.match(solutions, /MA001:\s+'[^']+\/hn-ma-001\/02\.png'/)
+  assert.match(solutions, /MS002:\s+'[^']+\/hn-ms-002\/01\.png'/)
+  assert.match(products, /MA001:\s+'[^']+\/hn-ma-001\/02\.png'/)
+  assert.match(products, /MS002:\s+'[^']+\/hn-ms-002\/01\.png'/)
 })
 
 test('homepage exposes rich motion with an accessible reduced-motion fallback', () => {

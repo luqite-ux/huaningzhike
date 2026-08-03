@@ -337,7 +337,7 @@ const SOLUTIONS = [
     title: 'DLC & Wear-Resistant Coatings',
     desc: 'TiN, TiAlN, CrN, AlTiN, and DLC coatings for cutting tools, forming dies, medical devices, and tribological components. High-throughput arc and composite platforms.',
     tags: ['Cutting Tools', 'DLC Films', 'Die & Mold', 'Automotive'],
-    image: 'https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/c0542148-cfbe-4c44-b7f2-7b36465032a2/products/hn-ma-001/01.png',
+    image: 'https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/c0542148-cfbe-4c44-b7f2-7b36465032a2/products/hn-ma-001/02.png',
   },
   {
     slug: 'semiconductor-thin-films',
@@ -345,7 +345,7 @@ const SOLUTIONS = [
     title: 'Semiconductor Thin Films',
     desc: 'Metal contacts, barrier layers, transparent conductors, piezoelectric, and high-k dielectric films for device fabrication, MEMS, and power electronics research.',
     tags: ['Metal Contacts', 'TCO Films', 'Piezoelectric', 'Gate Oxides'],
-    image: 'https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/c0542148-cfbe-4c44-b7f2-7b36465032a2/products/hn-ms-002/02.png',
+    image: 'https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/c0542148-cfbe-4c44-b7f2-7b36465032a2/products/hn-ms-002/01.png',
   },
   {
     slug: 'research-platforms',
