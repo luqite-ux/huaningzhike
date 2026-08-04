@@ -15,6 +15,8 @@ const productCatalog = fs.readFileSync(path.join(root, 'components/products/prod
 const footer = fs.readFileSync(path.join(root, 'components/layout/site-footer.tsx'), 'utf8')
 const productsDb = fs.readFileSync(path.join(root, 'lib/products-db.ts'), 'utf8')
 const verifiedSpecs = fs.readFileSync(path.join(root, 'lib/verified-product-specs.ts'), 'utf8')
+const inquiryForm = fs.readFileSync(path.join(root, 'components/inquiry-form.tsx'), 'utf8')
+const rootLayout = fs.readFileSync(path.join(root, 'app/layout.tsx'), 'utf8')
 const pages = fs.readdirSync(path.join(root, 'app'), { recursive: true })
   .filter((file) => file.endsWith('.tsx'))
   .map((file) => fs.readFileSync(path.join(root, 'app', file), 'utf8'))
@@ -76,8 +78,15 @@ test('light footer uses accessible dark accents instead of low-contrast gold tex
 
 test('public copy avoids unverified response times, hours, and inflated product claims', () => {
   assert.doesNotMatch(pages, /responds within one business day|Business Hours/i)
+  assert.doesNotMatch(inquiryForm, /respond within one business day/i)
   assert.doesNotMatch(products, /preferred platform|unparalleled flexibility|leading universities/i)
 })
+
+test('site metadata contains no v0 branding and provides a favicon fallback', () => {
+  assert.doesNotMatch(rootLayout, /generator:\s*['"]v0\.app['"]/i)
+  assert.equal(fs.existsSync(path.join(root, 'app/favicon.ico/route.ts')), true)
+})
+
 
 test('customer-facing pages and product fallback use tenant R2 images instead of v0 blobs', () => {
   assert.doesNotMatch(`${pages}\n${homeSections}\n${products}\n${hero}`, /hebbkx1anhila5yf|blob\.vercel-storage/)

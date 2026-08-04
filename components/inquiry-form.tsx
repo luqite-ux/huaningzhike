@@ -73,7 +73,7 @@ export function InquiryForm({
         <CheckCircle size={48} className="text-[var(--success)] mx-auto mb-4" />
         <h3 className="font-heading text-2xl text-[var(--foreground)] mb-3">Inquiry Received</h3>
         <p className="text-[var(--steel-light)] leading-relaxed max-w-md mx-auto">
-          Thank you for contacting HUANING ZHIKE. A member of our engineering team will review your inquiry and respond within one business day.
+          Thank you for contacting HUANING ZHIKE. A member of our engineering team will review your inquiry and follow up using the contact details provided.
         </p>
       </div>
     )
