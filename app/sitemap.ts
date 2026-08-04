@@ -7,6 +7,8 @@ import { SITE_URL } from '@/lib/site'
 const BASE_URL = SITE_URL
 const CONTENT_UPDATED_AT = '2026-08-03'
 
+export const revalidate = 60
+
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const contentUpdatedAt = new Date(CONTENT_UPDATED_AT)
 
