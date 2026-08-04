@@ -96,21 +96,21 @@ export function SiteFooter() {
               <div className="flex items-center gap-3">
                 <Mail size={15} className="text-[var(--gold)] shrink-0" />
                 <a
-                  href="mailto:huaning@huaningzhike.cn"
+                  href="mailto:info@huaningpvd.com"
                   className="text-[var(--steel)] text-sm hover:text-[var(--gold)] transition-colors break-all"
                 >
-                  huaning@huaningzhike.cn
+                  info@huaningpvd.com
                 </a>
               </div>
               <div className="flex items-center gap-3">
                 <Globe size={15} className="text-[var(--gold)] shrink-0" />
                 <a
-                  href="https://www.huaningzhike.com"
+                  href="https://huaningpvd.com"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-[var(--steel)] text-sm hover:text-[var(--gold)] transition-colors"
                 >
-                  www.huaningzhike.com
+                  huaningpvd.com
                 </a>
               </div>
             </address>

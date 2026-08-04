@@ -111,7 +111,7 @@ export default function RootLayout({
             alternateName: SITE_NAME,
             url: SITE_URL,
             logo: `${SITE_URL}/images/logo.png`,
-            email: 'huaning@huaningzhike.cn',
+            email: 'info@huaningpvd.com',
             telephone: '+86-131-5710-7579',
             address: {
               '@type': 'PostalAddress',

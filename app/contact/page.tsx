@@ -27,14 +27,14 @@ const CONTACT_INFO = [
   {
     icon: Mail,
     label: 'Email',
-    value: 'huaning@huaningzhike.cn',
-    href: 'mailto:huaning@huaningzhike.cn',
+    value: 'info@huaningpvd.com',
+    href: 'mailto:info@huaningpvd.com',
   },
   {
     icon: Globe,
     label: 'Website',
-    value: 'www.huaningzhike.com',
-    href: 'https://www.huaningzhike.com',
+    value: 'huaningpvd.com',
+    href: 'https://huaningpvd.com',
   },
 ]
 

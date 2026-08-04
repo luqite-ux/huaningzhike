@@ -87,7 +87,7 @@ export async function submitInquiry(
   // ─────────────────────────────────────────────────────────────────────────
 
   const supabase = createSupabaseClient()
-  if (!supabase) return { success: false, error: 'Online submission is not configured. Please email huaning@huaningzhike.cn.' }
+  if (!supabase) return { success: false, error: 'Online submission is not configured. Please email info@huaningpvd.com.' }
   const details = [payload.message, payload.country && `Country / Region: ${payload.country}`, payload.application && `Application: ${payload.application}`, payload.workpieceMaterial && `Workpiece material: ${payload.workpieceMaterial}`, payload.desiredCoating && `Desired coating: ${payload.desiredCoating}`, payload.expectedCapacity && `Expected capacity: ${payload.expectedCapacity}`].filter(Boolean).join('\n\n')
   const { error: dbError } = await supabase.from('inquiries').insert({ tenant_id: tenantId, name: payload.name, email: payload.email, phone: payload.phone, company: payload.company, subject: [payload.inquiryType, payload.productModel].filter(Boolean).join(' — '), message: details })
   if (dbError) {

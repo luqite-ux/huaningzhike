@@ -72,7 +72,7 @@ export default function PrivacyPage() {
 
             <section>
               <p className="text-[var(--steel-light)] text-sm leading-relaxed">
-                This privacy policy describes how Huaning Intelligent Technology (Hangzhou) Intelligent Equipment Manufacturing Co., Ltd. (&ldquo;HUANING ZHIKE&rdquo;, &ldquo;we&rdquo;, &ldquo;our&rdquo;, or &ldquo;us&rdquo;) collects, uses, and protects information submitted through the HUANING ZHIKE website (<a href="https://www.huaningzhike.com" className="text-[var(--gold)] hover:underline">www.huaningzhike.com</a>). This website is a lead-generation and information resource for prospective business customers. We do not sell products or accept payment online.
+                This privacy policy describes how Huaning Intelligent Technology (Hangzhou) Intelligent Equipment Manufacturing Co., Ltd. (&ldquo;HUANING ZHIKE&rdquo;, &ldquo;we&rdquo;, &ldquo;our&rdquo;, or &ldquo;us&rdquo;) collects, uses, and protects information submitted through the HUANING ZHIKE website (<a href="https://huaningpvd.com" className="text-[var(--gold)] hover:underline">huaningpvd.com</a>). This website is a lead-generation and information resource for prospective business customers. We do not sell products or accept payment online.
               </p>
             </section>
 
@@ -83,7 +83,7 @@ export default function PrivacyPage() {
               <address className="not-italic glass-card rounded-lg p-5 border border-[rgba(200,168,75,0.12)] mt-4 space-y-1.5">
                 <p className="text-[var(--foreground)] font-medium">Huaning Intelligent Technology (Hangzhou) Intelligent Equipment Manufacturing Co., Ltd.</p>
                 <p>No. 16 Xiken Road, Building 1, Room 102, Xingqiao Subdistrict, Linping District, Hangzhou, China</p>
-                <a href="mailto:huaning@huaningzhike.cn" className="text-[var(--gold)] hover:underline block">huaning@huaningzhike.cn</a>
+                <a href="mailto:info@huaningpvd.com" className="text-[var(--gold)] hover:underline block">info@huaningpvd.com</a>
                 <a href="tel:+8613157107579" className="text-[var(--steel-light)] hover:text-[var(--gold)] transition-colors block">+86 131 5710 7579</a>
               </address>
             </PolicySection>
@@ -142,7 +142,7 @@ export default function PrivacyPage() {
 
             <PolicySection id="your-rights" title="6. Your Rights">
               <p>
-                Depending on your country or region, you may have rights regarding your personal information, including the right to access, correct, delete, or restrict the processing of your data, and to receive a copy of information we hold about you. To exercise any of these rights, contact us at <a href="mailto:huaning@huaningzhike.cn" className="text-[var(--gold)] hover:underline">huaning@huaningzhike.cn</a>. We will respond to verifiable requests within a reasonable timeframe.
+                Depending on your country or region, you may have rights regarding your personal information, including the right to access, correct, delete, or restrict the processing of your data, and to receive a copy of information we hold about you. To exercise any of these rights, contact us at <a href="mailto:info@huaningpvd.com" className="text-[var(--gold)] hover:underline">info@huaningpvd.com</a>. We will respond to verifiable requests within a reasonable timeframe.
               </p>
             </PolicySection>
 
@@ -170,7 +170,7 @@ export default function PrivacyPage() {
               </p>
               <address className="not-italic glass-card rounded-lg p-5 border border-[rgba(200,168,75,0.12)] mt-4 space-y-2">
                 <p className="text-[var(--foreground)] font-medium">HUANING ZHIKE — Privacy Enquiry</p>
-                <a href="mailto:huaning@huaningzhike.cn" className="text-[var(--gold)] hover:underline block text-sm">huaning@huaningzhike.cn</a>
+                <a href="mailto:info@huaningpvd.com" className="text-[var(--gold)] hover:underline block text-sm">info@huaningpvd.com</a>
                 <p className="text-[var(--steel-light)] text-sm">
                   No. 16 Xiken Road, Building 1, Room 102, Xingqiao Subdistrict, Linping District, Hangzhou, China
                 </p>

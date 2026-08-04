@@ -123,9 +123,9 @@ export default function AboutPage() {
                   <Phone size={15} className="text-[var(--gold)]" />
                   +86 131 5710 7579
                 </a>
-                <a href="mailto:huaning@huaningzhike.cn" className="flex items-center gap-3 text-sm text-[var(--steel-light)] hover:text-[var(--gold)] transition-colors break-all">
+                <a href="mailto:info@huaningpvd.com" className="flex items-center gap-3 text-sm text-[var(--steel-light)] hover:text-[var(--gold)] transition-colors break-all">
                   <Mail size={15} className="text-[var(--gold)]" />
-                  huaning@huaningzhike.cn
+                  info@huaningpvd.com
                 </a>
               </address>
             </div>

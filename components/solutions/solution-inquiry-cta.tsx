@@ -38,11 +38,11 @@ export function SolutionInquiryCta({ solutionTitle }: SolutionInquiryCtaProps) {
 
         <div className="pt-4 border-t border-[rgba(200,168,75,0.1)] space-y-2.5">
           <a
-            href="mailto:huaning@huaningzhike.cn"
+            href="mailto:info@huaningpvd.com"
             className="flex items-center gap-2.5 text-xs text-[var(--steel)] hover:text-[var(--gold)] transition-colors"
           >
             <Mail size={13} className="text-[var(--gold)] shrink-0" />
-            huaning@huaningzhike.cn
+            info@huaningpvd.com
           </a>
           <a
             href="tel:+8613157107579"

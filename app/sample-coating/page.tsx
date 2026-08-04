@@ -186,9 +186,9 @@ export default function SampleCoatingPage() {
               <div className="glass-card rounded-xl p-5 border border-[rgba(200,168,75,0.15)]">
                 <h3 className="font-heading font-semibold text-[var(--foreground)] mb-3">Direct Contact</h3>
                 <div className="space-y-2.5">
-                  <a href="mailto:huaning@huaningzhike.cn" className="flex items-center gap-2.5 text-sm text-[var(--steel-light)] hover:text-[var(--gold)] transition-colors">
+                  <a href="mailto:info@huaningpvd.com" className="flex items-center gap-2.5 text-sm text-[var(--steel-light)] hover:text-[var(--gold)] transition-colors">
                     <Mail size={14} className="text-[var(--gold)]" aria-hidden="true" />
-                    huaning@huaningzhike.cn
+                    info@huaningpvd.com
                   </a>
                   <a href="tel:+8613157107579" className="flex items-center gap-2.5 text-sm text-[var(--steel-light)] hover:text-[var(--gold)] transition-colors">
                     <Phone size={14} className="text-[var(--gold)]" aria-hidden="true" />
