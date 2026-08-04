@@ -90,6 +90,7 @@ test('site metadata contains no v0 branding and provides a favicon fallback', ()
 
 test('sitemap revalidates database-backed product and article routes', () => {
   assert.match(sitemap, /export\s+const\s+revalidate\s*=\s*60/)
+  assert.match(sitemap, /export\s+const\s+dynamic\s*=\s*['"]force-dynamic['"]/) 
 })
 
 
