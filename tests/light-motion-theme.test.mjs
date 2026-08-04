@@ -17,7 +17,7 @@ const productsDb = fs.readFileSync(path.join(root, 'lib/products-db.ts'), 'utf8'
 const verifiedSpecs = fs.readFileSync(path.join(root, 'lib/verified-product-specs.ts'), 'utf8')
 const inquiryForm = fs.readFileSync(path.join(root, 'components/inquiry-form.tsx'), 'utf8')
 const rootLayout = fs.readFileSync(path.join(root, 'app/layout.tsx'), 'utf8')
-const sitemap = fs.readFileSync(path.join(root, 'app/sitemap.ts'), 'utf8')
+const sitemap = fs.readFileSync(path.join(root, 'app/sitemap.xml/route.ts'), 'utf8')
 const pages = fs.readdirSync(path.join(root, 'app'), { recursive: true })
   .filter((file) => file.endsWith('.tsx'))
   .map((file) => fs.readFileSync(path.join(root, 'app', file), 'utf8'))
@@ -88,9 +88,11 @@ test('site metadata contains no v0 branding and provides a favicon fallback', ()
   assert.equal(fs.existsSync(path.join(root, 'app/favicon.ico/route.ts')), true)
 })
 
-test('sitemap revalidates database-backed product and article routes', () => {
-  assert.match(sitemap, /export\s+const\s+revalidate\s*=\s*60/)
+test('sitemap renders database-backed product and article routes at request time', () => {
+  assert.match(sitemap, /export\s+const\s+revalidate\s*=\s*0/)
   assert.match(sitemap, /export\s+const\s+dynamic\s*=\s*['"]force-dynamic['"]/)
+  assert.match(sitemap, /getAllArticles\s*\(/)
+  assert.match(sitemap, /Cache-Control['"]?\s*:\s*['"]no-store/)
 })
 
 
