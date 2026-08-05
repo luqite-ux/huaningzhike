@@ -281,10 +281,10 @@ export function DepositionTechnologyMatrix() {
           />
         </RevealSection>
 
-        <div className="grid md:grid-cols-2 gap-5">
+        <div className="grid md:grid-cols-2 md:items-stretch gap-5">
           {TECHNOLOGIES.map((tech) => (
-            <RevealSection key={tech.abbrev}>
-              <div className={`glass-card rounded-xl p-6 border ${tech.borderColor} hover:shadow-[0_4px_32px_rgba(200,168,75,0.07)] transition-all duration-300`}>
+            <RevealSection key={tech.abbrev} className="md:h-full">
+              <div className={`glass-card rounded-xl p-6 border ${tech.borderColor} hover:shadow-[0_4px_32px_rgba(200,168,75,0.07)] transition-all duration-300 md:h-full md:flex md:flex-col`}>
                 <div className="flex items-start justify-between mb-4">
                   <div>
                     <div className={`font-mono text-xs font-semibold tracking-widest ${tech.accentColor} mb-1`}>{tech.abbrev}</div>
@@ -295,7 +295,7 @@ export function DepositionTechnologyMatrix() {
                   </div>
                 </div>
                 <p className="text-[var(--steel-light)] text-sm leading-relaxed mb-5">{tech.desc}</p>
-                <ul className="space-y-1.5 mb-5">
+                <ul className="space-y-1.5 mb-5 md:flex-1">
                   {tech.properties.map((prop) => (
                     <li key={prop} className="flex items-center gap-2 text-sm">
                       <CheckCircle2 size={13} className={tech.accentColor} aria-hidden="true" />

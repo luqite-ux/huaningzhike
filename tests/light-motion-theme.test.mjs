@@ -60,6 +60,14 @@ test('homepage exposes rich motion with an accessible reduced-motion fallback', 
   assert.match(css, /prefers-reduced-motion:\s*reduce/)
 })
 
+test('deposition technology cards align by row on desktop without forcing mobile height', () => {
+  assert.match(homeSections, /grid md:grid-cols-2 md:items-stretch gap-5/)
+  assert.match(homeSections, /<RevealSection key=\{tech\.abbrev\} className="md:h-full">/)
+  assert.match(homeSections, /glass-card[^"\n]*md:h-full md:flex md:flex-col/)
+  assert.match(homeSections, /<ul className="space-y-1\.5 mb-5 md:flex-1">/)
+  assert.doesNotMatch(homeSections, /(?:^|\s)h-full(?:\s|$)/m)
+})
+
 test('catalog uses compact product-line tabs instead of search and advanced filters', () => {
   assert.doesNotMatch(productCatalog, /Search by name|aria-label="Search equipment"|>\s*Filters\s*</)
   assert.match(productCatalog, /All Systems/)
