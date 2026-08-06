@@ -40,7 +40,7 @@
 
 ### Task 4: Synchronize R2 and Supabase
 
-- [x] Upload 12 approved assets (two accurate, clean views per corrected product) under tenant- and product-scoped keys.
+- [ ] Upload all 18 supplied assets (three views per corrected product) under tenant- and product-scoped keys, with background-only watermark cleanup where required.
 - [ ] Update only the tenanted six product image rows and applicable product content rows.
 - [ ] Preserve existing non-English translations unless the corresponding translated field must be corrected.
 - [ ] Read the tenant rows back and verify exact values.

@@ -151,13 +151,13 @@ test('six customer-corrected products use dedicated August image sets', () => {
     assert.match(products, new RegExp(`${key}:\\s+'[^']+/customer-update-2026-08/01\\.webp'`))
   }
   assert.match(products, /hn-ms-r-007\/customer-update-2026-08\/01\.webp/)
-  assert.match(products, /const correctedGallery = \(slug: string\) => \[1, 2\]/)
+  assert.match(products, /const correctedGallery = \(slug: string\) => \[1, 2, 3\]/)
+  assert.match(products, /hn-ms-r-007\/customer-update-2026-08\/02\.webp/)
 })
 
 test('three catalog products use verified front-view primary images', () => {
-  for (const key of ['MAMS003', 'MAR006', 'MSR007']) {
-    assert.match(products, new RegExp(`${key}:\\s+'[^']+/front-view-update-2026-08/01\\.webp'`))
-  }
+  for (const key of ['MAMS003', 'MAR006']) assert.match(products, new RegExp(`${key}:\\s+'[^']+/front-view-update-2026-08/01\\.webp'`))
+  assert.match(products, /MSR007:\s+'[^']+\/front-view-update-2026-08-v2\/01\.webp'/)
   assert.match(homeSections, /products\/hn-ma-ms-003\/front-view-update-2026-08\/01\.webp/)
-  assert.match(homeSections, /products\/hn-ms-r-007\/front-view-update-2026-08\/01\.webp/)
+  assert.match(homeSections, /products\/hn-ms-r-007\/front-view-update-2026-08-v2\/01\.webp/)
 })

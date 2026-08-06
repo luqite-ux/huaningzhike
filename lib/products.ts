@@ -52,13 +52,13 @@ const IMG = {
   EB004:    'https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/c0542148-cfbe-4c44-b7f2-7b36465032a2/products/hn-eb-004/01.jpg',
   MSEB005:  'https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/c0542148-cfbe-4c44-b7f2-7b36465032a2/products/hn-ms-eb-005/customer-update-2026-08/01.webp',
   MAR006:   'https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/c0542148-cfbe-4c44-b7f2-7b36465032a2/products/hn-ma-r-006/front-view-update-2026-08/01.webp',
-  MSR007:   'https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/c0542148-cfbe-4c44-b7f2-7b36465032a2/products/hn-ms-r-007/front-view-update-2026-08/01.webp',
+  MSR007:   'https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/c0542148-cfbe-4c44-b7f2-7b36465032a2/products/hn-ms-r-007/front-view-update-2026-08-v2/01.webp',
   MAMSR008: 'https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/c0542148-cfbe-4c44-b7f2-7b36465032a2/products/hn-ma-ms-r-008/customer-update-2026-08/01.webp',
   EBR009:   'https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/c0542148-cfbe-4c44-b7f2-7b36465032a2/products/hn-eb-r-009/customer-update-2026-08/01.webp',
   MSEBR010: 'https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/c0542148-cfbe-4c44-b7f2-7b36465032a2/products/hn-ms-eb-r-010/customer-update-2026-08/01.webp',
 } as const
 
-const correctedGallery = (slug: string) => [1, 2].map((index) =>
+const correctedGallery = (slug: string) => [1, 2, 3].map((index) =>
   `https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/c0542148-cfbe-4c44-b7f2-7b36465032a2/products/${slug}/customer-update-2026-08/0${index}.webp`,
 )
 
@@ -252,7 +252,11 @@ export const products: Product[] = [
     depositionProcess: 'Magnetron Sputtering',
     applications: ['Research & Development', 'Optical Thin Films', 'Semiconductor Thin Films'],
     image: IMG.MSR007,
-    images: [IMG.MSR007, 'https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/c0542148-cfbe-4c44-b7f2-7b36465032a2/products/hn-ms-r-007/customer-update-2026-08/01.webp'],
+    images: [
+      IMG.MSR007,
+      'https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/c0542148-cfbe-4c44-b7f2-7b36465032a2/products/hn-ms-r-007/customer-update-2026-08/01.webp',
+      'https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/c0542148-cfbe-4c44-b7f2-7b36465032a2/products/hn-ms-r-007/customer-update-2026-08/02.webp',
+    ],
     tagline: 'Precision research sputtering with full parameter accessibility',
     summary:
       'The HN-MS-R-007 is a research-grade magnetron sputtering platform built for thin-film research and process development in academic, semiconductor, and optical technology laboratories. Supporting multiple sputtering configurations — including co-sputtering and sequential deposition — the system provides the parameter range and in-situ measurement options expected of a premier research tool.',

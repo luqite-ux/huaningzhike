@@ -85,7 +85,7 @@ export function ProductLineGateways() {
               title: 'Lab R&D PVD Platforms',
               desc: 'Compact, configurable coating systems for university laboratories, research institutes, and industrial R&D centers. Identical deposition physics at research scale, with accessible chamber designs that promote rapid process iteration.',
               href: '/products?line=lab',
-              image: 'https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/c0542148-cfbe-4c44-b7f2-7b36465032a2/products/hn-ms-r-007/front-view-update-2026-08/01.webp',
+              image: 'https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/c0542148-cfbe-4c44-b7f2-7b36465032a2/products/hn-ms-r-007/front-view-update-2026-08-v2/01.webp',
               models: ['HN-MA-R-006', 'HN-MS-R-007', 'HN-MA-MS-R-008', 'HN-EB-R-009', 'HN-MS-EB-R-010'],
             },
           ].map((line, i) => (
@@ -353,7 +353,7 @@ const SOLUTIONS = [
     title: 'Research Platforms',
     desc: 'Fully configurable laboratory PVD systems for universities, research institutes, and advanced materials R&D. CF-flange compatible chambers with analytical instrument integration.',
     tags: ['Materials Science', 'Process Development', 'University Labs', 'Scale-up Studies'],
-    image: 'https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/c0542148-cfbe-4c44-b7f2-7b36465032a2/products/hn-ms-r-007/front-view-update-2026-08/01.webp',
+    image: 'https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/c0542148-cfbe-4c44-b7f2-7b36465032a2/products/hn-ms-r-007/front-view-update-2026-08-v2/01.webp',
   },
 ]
 

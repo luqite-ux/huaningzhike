@@ -18,7 +18,7 @@ Implement the customer's August correction package across product copy, technica
 
 ## Image corrections
 
-- Audit all 18 supplied source images and replace imagery for six products with two accurate, clean views per product; reject watermarked or AI-distorted variants.
+- Audit all 18 supplied source images and publish all three corresponding views for each of the six products. Use the clearest front or representative view first, with the remaining views in the product-detail gallery; clean background-only watermarks without altering equipment geometry.
 - Main images prioritize complete, clear, near-front views without watermarks.
 - Images with watermarks, unclear edges, dirty backgrounds, or obvious generation artifacts are repaired before publication; equipment geometry and official branding must remain unchanged.
 - Upload customer-specific assets to R2 and update both Supabase and fallback mappings.
