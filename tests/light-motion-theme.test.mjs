@@ -147,8 +147,17 @@ test('customer-confirmed product names and thin-film capabilities stay exact', (
 })
 
 test('six customer-corrected products use dedicated August image sets', () => {
-  for (const key of ['MA001', 'MSEB005', 'MSR007', 'MAMSR008', 'EBR009', 'MSEBR010']) {
+  for (const key of ['MA001', 'MSEB005', 'MAMSR008', 'EBR009', 'MSEBR010']) {
     assert.match(products, new RegExp(`${key}:\\s+'[^']+/customer-update-2026-08/01\\.webp'`))
   }
+  assert.match(products, /hn-ms-r-007\/customer-update-2026-08\/01\.webp/)
   assert.match(products, /const correctedGallery = \(slug: string\) => \[1, 2\]/)
+})
+
+test('three catalog products use verified front-view primary images', () => {
+  for (const key of ['MAMS003', 'MAR006', 'MSR007']) {
+    assert.match(products, new RegExp(`${key}:\\s+'[^']+/front-view-update-2026-08/01\\.webp'`))
+  }
+  assert.match(homeSections, /products\/hn-ma-ms-003\/front-view-update-2026-08\/01\.webp/)
+  assert.match(homeSections, /products\/hn-ms-r-007\/front-view-update-2026-08\/01\.webp/)
 })

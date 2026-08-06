@@ -48,11 +48,11 @@ export interface Product {
 const IMG = {
   MA001:    'https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/c0542148-cfbe-4c44-b7f2-7b36465032a2/products/hn-ma-001/customer-update-2026-08/01.webp',
   MS002:    'https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/c0542148-cfbe-4c44-b7f2-7b36465032a2/products/hn-ms-002/01.png',
-  MAMS003:  'https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/c0542148-cfbe-4c44-b7f2-7b36465032a2/products/hn-ma-ms-003/01.png',
+  MAMS003:  'https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/c0542148-cfbe-4c44-b7f2-7b36465032a2/products/hn-ma-ms-003/front-view-update-2026-08/01.webp',
   EB004:    'https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/c0542148-cfbe-4c44-b7f2-7b36465032a2/products/hn-eb-004/01.jpg',
   MSEB005:  'https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/c0542148-cfbe-4c44-b7f2-7b36465032a2/products/hn-ms-eb-005/customer-update-2026-08/01.webp',
-  MAR006:   'https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/c0542148-cfbe-4c44-b7f2-7b36465032a2/products/hn-ma-r-006/01.png',
-  MSR007:   'https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/c0542148-cfbe-4c44-b7f2-7b36465032a2/products/hn-ms-r-007/customer-update-2026-08/01.webp',
+  MAR006:   'https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/c0542148-cfbe-4c44-b7f2-7b36465032a2/products/hn-ma-r-006/front-view-update-2026-08/01.webp',
+  MSR007:   'https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/c0542148-cfbe-4c44-b7f2-7b36465032a2/products/hn-ms-r-007/front-view-update-2026-08/01.webp',
   MAMSR008: 'https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/c0542148-cfbe-4c44-b7f2-7b36465032a2/products/hn-ma-ms-r-008/customer-update-2026-08/01.webp',
   EBR009:   'https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/c0542148-cfbe-4c44-b7f2-7b36465032a2/products/hn-eb-r-009/customer-update-2026-08/01.webp',
   MSEBR010: 'https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/c0542148-cfbe-4c44-b7f2-7b36465032a2/products/hn-ms-eb-r-010/customer-update-2026-08/01.webp',
@@ -133,7 +133,7 @@ export const products: Product[] = [
     depositionProcess: 'Multi-arc & Magnetron Sputtering',
     applications: ['Hard Decorative Coatings', 'Wear-resistant & DLC Coatings', 'Tool & Die Coatings', 'Optical Thin Films'],
     image: IMG.MAMS003,
-    images: [IMG.MAMS003, IMG.MA001, IMG.MS002],
+    images: [IMG.MAMS003, 'https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/c0542148-cfbe-4c44-b7f2-7b36465032a2/products/hn-ma-ms-003/01.png'],
     tagline: 'Combine arc and sputtering in one integrated production platform',
     summary:
       'The HN-MA-MS-003 integrates multi-arc ion plating and magnetron sputtering sources within a single vacuum chamber, enabling sequential or simultaneous multi-process depositions. This composite architecture supports the creation of complex multilayer coating stacks — such as adhesion interlayers deposited by arc followed by functional overcoats applied by sputtering — without breaking vacuum.',
@@ -224,7 +224,7 @@ export const products: Product[] = [
     depositionProcess: 'Multi-arc Ion Plating',
     applications: ['Research & Development', 'Wear-resistant & DLC Coatings', 'Hard Decorative Coatings'],
     image: IMG.MAR006,
-    images: [IMG.MAR006, IMG.MA001],
+    images: [IMG.MAR006, 'https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/c0542148-cfbe-4c44-b7f2-7b36465032a2/products/hn-ma-r-006/01.png'],
     tagline: 'Compact arc plating platform for process development and small batches',
     summary:
       'The HN-MA-R-006 is a laboratory-scale multi-arc ion plating system designed for process research, coating development, and small-batch production in university laboratories, research institutes, and industrial R&D centers. Its compact footprint and accessible chamber design enable rapid iteration of arc plating processes at a scale appropriate for coupon-level and small-component coating studies.',
@@ -252,7 +252,7 @@ export const products: Product[] = [
     depositionProcess: 'Magnetron Sputtering',
     applications: ['Research & Development', 'Optical Thin Films', 'Semiconductor Thin Films'],
     image: IMG.MSR007,
-    images: correctedGallery('hn-ms-r-007'),
+    images: [IMG.MSR007, 'https://pub-c7a22068052144a5805830c30d280128.r2.dev/tenants/c0542148-cfbe-4c44-b7f2-7b36465032a2/products/hn-ms-r-007/customer-update-2026-08/01.webp'],
     tagline: 'Precision research sputtering with full parameter accessibility',
     summary:
       'The HN-MS-R-007 is a research-grade magnetron sputtering platform built for thin-film research and process development in academic, semiconductor, and optical technology laboratories. Supporting multiple sputtering configurations — including co-sputtering and sequential deposition — the system provides the parameter range and in-situ measurement options expected of a premier research tool.',
