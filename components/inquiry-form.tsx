@@ -24,8 +24,8 @@ const APPLICATIONS = [
 ]
 
 const PRODUCT_MODELS = [
-  'HN-MA-001 — Pure Multi-arc Ion Plating Equipment',
-  'HN-MS-002 — Pure Magnetron Sputtering Equipment',
+  'HN-MA-001 — Multi-arc Ion Plating Equipment',
+  'HN-MS-002 — Magnetron Sputtering Equipment',
   'HN-MA-MS-003 — Multi-arc & Magnetron Sputtering Composite',
   'HN-EB-004 — Electron Beam Evaporation Equipment',
   'HN-MS-EB-005 — Magnetron & Electron Beam Composite',

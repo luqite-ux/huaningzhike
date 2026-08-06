@@ -23,6 +23,10 @@ export const VERIFIED_PRODUCT_SPECS: Record<string, ProductSpec[]> = {
       "value": "Segmented infrared precision heating"
     },
     {
+      "label": "Ion Assistance",
+      "value": "Ion-beam-assisted deposition for enhanced film density and adhesion"
+    },
+    {
       "label": "Monitoring",
       "value": "Online optical monitor with automatic multilayer endpoint detection"
     }
@@ -43,6 +47,10 @@ export const VERIFIED_PRODUCT_SPECS: Record<string, ProductSpec[]> = {
     {
       "label": "Temperature Control",
       "value": "Low-stress precision temperature control"
+    },
+    {
+      "label": "Ion Assistance",
+      "value": "Ion-beam-assisted deposition for enhanced film density and adhesion"
     },
     {
       "label": "Monitoring",
@@ -111,6 +119,18 @@ export const VERIFIED_PRODUCT_SPECS: Record<string, ProductSpec[]> = {
     {
       "label": "Control",
       "value": "Segmented automatic process programs"
+    },
+    {
+      "label": "Temperature Control",
+      "value": "Wide-range substrate temperature control from ambient to 1200 °C with in-situ annealing"
+    },
+    {
+      "label": "Substrate Preparation",
+      "value": "Integrated in-situ ion cleaning for substrate surface activation before deposition"
+    },
+    {
+      "label": "Sample Compatibility",
+      "value": "Wafers up to 8 inches and small research samples or coupons"
     }
   ],
   "hn-ma-ms-r-008": [
@@ -137,6 +157,18 @@ export const VERIFIED_PRODUCT_SPECS: Record<string, ProductSpec[]> = {
     {
       "label": "Control",
       "value": "Open process programming with automatic experiment-data storage and export"
+    },
+    {
+      "label": "Temperature Control",
+      "value": "Wide-range substrate temperature control from ambient to 1200 °C with in-situ annealing"
+    },
+    {
+      "label": "Substrate Preparation",
+      "value": "Integrated in-situ ion cleaning for substrate surface activation before deposition"
+    },
+    {
+      "label": "Sample Compatibility",
+      "value": "Wafers up to 8 inches and small research samples or coupons"
     }
   ],
   "hn-ma-r-006": [
@@ -193,6 +225,18 @@ export const VERIFIED_PRODUCT_SPECS: Record<string, ProductSpec[]> = {
     {
       "label": "Control",
       "value": "Automatic process recipe storage"
+    },
+    {
+      "label": "Temperature Control",
+      "value": "Wide-range substrate temperature control from ambient to 1200 °C with in-situ annealing"
+    },
+    {
+      "label": "Substrate Preparation",
+      "value": "Integrated in-situ ion cleaning for substrate surface activation before deposition"
+    },
+    {
+      "label": "Sample Compatibility",
+      "value": "Wafers up to 8 inches and small research samples or coupons"
     }
   ],
   "hn-ms-eb-005": [
@@ -222,7 +266,19 @@ export const VERIFIED_PRODUCT_SPECS: Record<string, ProductSpec[]> = {
     },
     {
       "label": "Temperature Control",
-      "value": "High-precision segmented temperature control"
+      "value": "Wide-range substrate temperature control from ambient to 1200 °C with in-situ annealing"
+    },
+    {
+      "label": "Substrate Preparation",
+      "value": "Integrated in-situ ion cleaning for substrate surface activation before deposition"
+    },
+    {
+      "label": "Sample Compatibility",
+      "value": "Wafers up to 8 inches and small research samples or coupons"
+    },
+    {
+      "label": "Ion Assistance",
+      "value": "Ion-beam-assisted deposition for enhanced film density and adhesion"
     }
   ],
   "hn-ms-eb-r-010": [
@@ -236,7 +292,7 @@ export const VERIFIED_PRODUCT_SPECS: Record<string, ProductSpec[]> = {
     },
     {
       "label": "Vacuum System",
-      "value": "Independent zoned pumping with dual vacuum valve sets"
+      "value": "Ultra-high-vacuum system with independent zoned pumping; ultimate pressure ≤ 3 × 10⁻⁸ Torr"
     },
     {
       "label": "Control",
@@ -249,6 +305,22 @@ export const VERIFIED_PRODUCT_SPECS: Record<string, ProductSpec[]> = {
     {
       "label": "Integration",
       "value": "Reserved rapid vacuum sampling port for SEM/AFM integration"
+    },
+    {
+      "label": "Temperature Control",
+      "value": "Wide-range substrate temperature control from ambient to 1200 °C with in-situ annealing"
+    },
+    {
+      "label": "Substrate Preparation",
+      "value": "Integrated in-situ ion cleaning for substrate surface activation before deposition"
+    },
+    {
+      "label": "Sample Compatibility",
+      "value": "Wafers up to 8 inches and small research samples or coupons"
+    },
+    {
+      "label": "Ion Assistance",
+      "value": "Ion-beam-assisted deposition for enhanced film density and adhesion"
     }
   ],
   "hn-ms-r-007": [
@@ -266,7 +338,15 @@ export const VERIFIED_PRODUCT_SPECS: Record<string, ProductSpec[]> = {
     },
     {
       "label": "Temperature Control",
-      "value": "Ambient to 800 °C; programmable 1–20 °C/min ramp rate"
+      "value": "Wide-range substrate temperature control from ambient to 1200 °C with in-situ annealing"
+    },
+    {
+      "label": "Substrate Preparation",
+      "value": "Integrated in-situ ion cleaning for substrate surface activation before deposition"
+    },
+    {
+      "label": "Sample Compatibility",
+      "value": "Wafers up to 8 inches and small research samples or coupons"
     },
     {
       "label": "Thickness Monitoring",

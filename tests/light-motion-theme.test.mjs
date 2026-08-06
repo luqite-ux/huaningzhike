@@ -2,6 +2,7 @@ import assert from 'node:assert/strict'
 import fs from 'node:fs'
 import path from 'node:path'
 import test from 'node:test'
+import { VERIFIED_PRODUCT_SPECS } from '../lib/verified-product-specs.ts'
 
 const root = path.resolve(import.meta.dirname, '..')
 const css = fs.readFileSync(path.join(root, 'app/globals.css'), 'utf8')
@@ -46,11 +47,11 @@ test('solution cards use clean customer R2 images without dark wash overlays', (
 })
 
 test('multi-arc and magnetron products use different customer-supplied views', () => {
-  assert.match(homeSections, /products\/hn-ma-001\/02\.png/)
+  assert.match(homeSections, /products\/hn-ma-001\/customer-update-2026-08\/01\.webp/)
   assert.match(homeSections, /products\/hn-ms-002\/01\.png/)
-  assert.match(solutions, /MA001:\s+'[^']+\/hn-ma-001\/02\.png'/)
+  assert.match(solutions, /MA001:\s+'[^']+\/hn-ma-001\/customer-update-2026-08\/01\.webp'/)
   assert.match(solutions, /MS002:\s+'[^']+\/hn-ms-002\/01\.png'/)
-  assert.match(products, /MA001:\s+'[^']+\/hn-ma-001\/02\.png'/)
+  assert.match(products, /MA001:\s+'[^']+\/hn-ma-001\/customer-update-2026-08\/01\.webp'/)
   assert.match(products, /MS002:\s+'[^']+\/hn-ms-002\/01\.png'/)
 })
 
@@ -120,4 +121,34 @@ test('all fallback products use the Excel-verified specification map', () => {
   assert.equal((products.match(/optionalModules: \[\]/g) ?? []).length, 10)
   assert.match(verifiedSpecs, /φ800–1800 mm/)
   assert.match(verifiedSpecs, /ultimate pressure up to 5 × 10⁻⁴ Pa/)
+})
+
+test('customer-confirmed product names and thin-film capabilities stay exact', () => {
+  assert.match(products, /name: 'Multi-arc Ion Plating Equipment'/)
+  assert.match(products, /name: 'Magnetron Sputtering Equipment'/)
+  assert.doesNotMatch(`${products}\n${inquiryForm}`, /Pure (?:Multi-arc|Magnetron)/)
+
+  const magnetronModels = ['hn-ms-002', 'hn-ma-ms-003', 'hn-ms-eb-005', 'hn-ms-r-007', 'hn-ma-ms-r-008', 'hn-ms-eb-r-010']
+  for (const slug of magnetronModels) {
+    const specs = VERIFIED_PRODUCT_SPECS[slug]
+    assert.ok(specs.some(({ value }) => value.includes('ambient to 1200 °C')), `${slug} must include ambient to 1200 °C`)
+    assert.ok(specs.some(({ value }) => /in-situ annealing/i.test(value)), `${slug} must include in-situ annealing`)
+    assert.ok(specs.some(({ value }) => /in-situ ion cleaning/i.test(value)), `${slug} must include in-situ ion cleaning`)
+    assert.ok(specs.some(({ value }) => /wafers up to 8 inches/i.test(value)), `${slug} must include 8-inch wafer compatibility`)
+  }
+
+  const electronBeamModels = ['hn-eb-004', 'hn-ms-eb-005', 'hn-eb-r-009', 'hn-ms-eb-r-010']
+  for (const slug of electronBeamModels) {
+    assert.ok(VERIFIED_PRODUCT_SPECS[slug].some(({ value }) => /ion-beam-assisted deposition/i.test(value)), `${slug} must include ion-beam-assisted deposition`)
+  }
+
+  const vacuum = VERIFIED_PRODUCT_SPECS['hn-ms-eb-r-010'].find(({ label }) => label === 'Vacuum System')?.value
+  assert.equal(vacuum, 'Ultra-high-vacuum system with independent zoned pumping; ultimate pressure ≤ 3 × 10⁻⁸ Torr')
+})
+
+test('six customer-corrected products use dedicated August image sets', () => {
+  for (const key of ['MA001', 'MSEB005', 'MSR007', 'MAMSR008', 'EBR009', 'MSEBR010']) {
+    assert.match(products, new RegExp(`${key}:\\s+'[^']+/customer-update-2026-08/01\\.webp'`))
+  }
+  assert.match(products, /const correctedGallery = \(slug: string\) => \[1, 2\]/)
 })
